@@ -42,11 +42,12 @@ const gymActs = todas.filter((a) => a.sport_type === 'WeightTraining');
 let pedidos = 0;
 for (const a of gymActs.sort((x, y) => Date.parse(y.start_date) - Date.parse(x.start_date))) {
   const c = cache[a.id];
-  if (c && !(Date.parse(a.start_date) > reciente)) continue;
+  // Las recientes se vuelven a pedir como mucho cada hora, para no gastar el límite diario de Strava.
+  if (c && (!(Date.parse(a.start_date) > reciente) || Date.now() - (c.leido || 0) < 36e5)) continue;
   if (pedidos >= MAX_DETALLES) break;
   const d = await api('/activities/' + a.id);
   pedidos++;
-  cache[a.id] = {description: d.description || ''};
+  cache[a.id] = {description: d.description || '', leido: Date.now()};
 }
 
 const forma = (a) => ({id: a.id, name: a.name, sport_type: a.sport_type, start_local: String(a.start_date_local || '').replace('Z', ''), description: (cache[a.id] && cache[a.id].description) || '', summary: {moving_time: a.moving_time, distance: a.distance}});

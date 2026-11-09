@@ -15,7 +15,7 @@
     const m = dash.meta();
     if (!m || !m.actualizado) { p.textContent = ''; return; }
     const d = new Date(m.actualizado);
-    p.textContent = 'Datos de Strava al ' + d.getDate() + ' ' + MESES[d.getMonth()] + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ' · se actualiza sola cada 30 minutos';
+    p.textContent = 'Datos de Strava al ' + d.getDate() + ' ' + MESES[d.getMonth()] + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ' · se actualiza sola cada 5 minutos';
   });
 
   // Pestaña nueva, justo después de "Entreno".
