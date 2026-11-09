@@ -191,13 +191,18 @@ dash.calc('sugerencias', {
       const fecha = v.reduce((m, s) => (s.fecha > m ? s.fecha : m), '');
       const dia = v.filter((s) => s.fecha === fecha);
       const top = Math.max(...dia.map((s) => s.kg));
-      const reps = dia.filter((s) => s.kg === top).map((s) => s.reps || 0);
+      const enTop = dia.filter((s) => s.kg === top);
+      const reps = enTop.map((s) => s.reps || 0);
+      const fallo = enTop.some((s) => s.tipo === 'fallo');
       const e1 = Math.max(...dia.map((s) => s.kg * (1 + (s.reps || 0) / 30)));
       const ultimas = fmt(top) + ' kg × ' + reps.join(' · ');
+      // Pesos que existen en la máquina: peso_base + n × incremento (p. ej. 42,5 → 50 → 57,5).
+      const rejilla = (x) => { const b = r.peso_base || 0; return b + Math.floor((x - b) / inc + 1e-9) * inc; };
+      const pocas = reps.length < r.series;
       let kg, consejo;
-      if (reps.length >= r.series && reps.every((x) => x >= hi)) { kg = top + inc; consejo = 'Hiciste el tope de reps en todas las series: toca subir.'; }
-      else if (reps.length >= r.series && reps.every((x) => x >= lo)) { kg = top; consejo = 'Mismo peso: intenta sumar 1 rep por serie hasta llegar a ' + hi + '.'; }
-      else { kg = Math.max(r.peso_min || 0, Math.floor(e1 / (1 + (lo + 4) / 30) / inc) * inc); consejo = 'Calculado con tu mejor serie para que hagas ' + lo + '–' + hi + ' reps con 2 de margen.'; }
+      if (!pocas && reps.every((x) => x >= hi)) { kg = top + inc; consejo = 'Hiciste el tope de reps en todas las series: toca subir.'; }
+      else if (reps.every((x) => x >= lo - 1) && !(fallo && pocas)) { kg = top; consejo = pocas ? 'Haz las ' + r.series + ' series con este peso; cuando llegues a ' + hi + ' reps en todas, sube.' : 'Mismo peso: intenta sumar 1 rep por serie hasta llegar a ' + hi + '.'; }
+      else { kg = Math.max(r.peso_min || 0, rejilla(e1 / (1 + (lo + (fallo ? 6 : 4)) / 30))); consejo = 'Calculado con tu mejor serie para que hagas ' + lo + '–' + hi + ' reps con 2 de margen.'; }
       return Object.assign(base, {kg: Math.round(kg * 100) / 100, origen: 'historial', ultima_fecha: fecha, ultimas, consejo});
     });
   }
