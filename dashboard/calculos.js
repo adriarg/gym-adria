@@ -203,7 +203,13 @@ dash.calc('sugerencias', {
       if (!pocas && reps.every((x) => x >= hi)) { kg = top + inc; consejo = 'Hiciste el tope de reps en todas las series: toca subir.'; }
       else if (reps.every((x) => x >= lo - 1) && !(fallo && pocas)) { kg = top; consejo = pocas ? 'Haz las ' + r.series + ' series con este peso; cuando llegues a ' + hi + ' reps en todas, sube.' : 'Mismo peso: intenta sumar 1 rep por serie hasta llegar a ' + hi + '.'; }
       else { kg = Math.max(r.peso_min || 0, rejilla(e1 / (1 + (lo + (fallo ? 6 : 4)) / 30))); consejo = 'Calculado con tu mejor serie para que hagas ' + lo + '–' + hi + ' reps con 2 de margen.'; }
-      return Object.assign(base, {kg: Math.round(kg * 100) / 100, origen: 'historial', ultima_fecha: fecha, ultimas, consejo});
+      // Estancado: tres sesiones seguidas con el mismo peso tope sin sumar ni una rep.
+      const fechas = [...new Set(v.map((s) => s.fecha))].sort().slice(-3);
+      const marca = (f) => { const d = v.filter((s) => s.fecha === f), t = Math.max(...d.map((s) => s.kg)); return [t, d.filter((s) => s.kg === t).reduce((n, s) => n + (s.reps || 0), 0)]; };
+      const m3 = fechas.map(marca);
+      const estancado = m3.length === 3 && m3[1][0] <= m3[0][0] && m3[2][0] <= m3[0][0] && m3[1][1] <= m3[0][1] && m3[2][1] <= m3[0][1];
+      if (estancado) consejo += ' Llevas 3 sesiones sin mejorar aquí: respeta el descanso de la ficha y llega cerca del fallo en la última serie. Si la próxima tampoco sube, baja un 10 % el peso y vuelve a subir desde ahí.';
+      return Object.assign(base, {kg: Math.round(kg * 100) / 100, origen: 'historial', ultima_fecha: fecha, ultimas, consejo, estancado});
     });
   }
 });

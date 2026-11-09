@@ -8,11 +8,11 @@ const dash = path.join(raiz, 'dashboard'), web = path.join(raiz, 'web'), out = p
 fs.mkdirSync(path.join(out, 'data'), {recursive: true});
 
 for (const f of ['estilos.css', 'anatomia.js', 'fotos.js', 'calculos.js', 'vistas.js']) fs.copyFileSync(path.join(dash, f), path.join(out, f));
-for (const f of ['rutina.json', 'partes.json', 'musculos.json']) fs.copyFileSync(path.join(dash, f), path.join(out, 'data', f));
+for (const f of ['rutina.json', 'partes.json', 'musculos.json', 'cambios.json']) fs.copyFileSync(path.join(dash, f), path.join(out, 'data', f));
 for (const f of fs.readdirSync(web)) fs.copyFileSync(path.join(web, f), path.join(out, f));
 
 let cuerpo = fs.readFileSync(path.join(dash, 'index.html'), 'utf8').replace('<meta name="dash-one-writer">', '').trim();
-cuerpo = cuerpo.replace('<script src="calculos.js"></script>', '<script src="diario.js"></script>\n<script src="calculos.js"></script>');
+cuerpo = cuerpo.replace('<script src="calculos.js"></script>', '<script src="analisis.js"></script>\n<script src="diario.js"></script>\n<script src="resumen.js"></script>\n<script src="calculos.js"></script>');
 cuerpo = cuerpo.replace('Esta página lee tu Strava cada vez que la abres.', 'Esta web lee el Strava de Adrià cada 5 minutos.');
 
 const html = `<!doctype html>

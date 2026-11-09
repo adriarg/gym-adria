@@ -1,0 +1,44 @@
+[
+ {
+  "fecha": "2026-11-09",
+  "id": "L6",
+  "cambio": "Curl predicador alternado → Curl con mancuernas de pie",
+  "motivo": "El predicador le daba dolor en el antebrazo, cerca del codo, y no pasaba de 90°. El curl de pie trabaja las mismas partes del bíceps (cabeza corta y larga, con el braquial de ayuda)."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "L4",
+  "cambio": "El remo del lunes pasa a ser el Remo alto iso-lateral (Hammer High Row), 25 kg por brazo",
+  "motivo": "Es la máquina que usó de verdad en el primer Torso A y le fue bien con 25–27,5 kg por brazo."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "L2",
+  "cambio": "Jalón al pecho: peso de partida 50 kg y saltos de 7,5 kg",
+  "motivo": "La máquina salta de 42,5 a 50 kg. Hizo 50 kg × 13 con margen."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "L3",
+  "cambio": "Press inclinado: peso de partida 20 → 15 kg",
+  "motivo": "Con 20 kg llegó al fallo en la primera serie de trabajo. Técnica: piernas en V y escápulas atrás y abajo."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "L5",
+  "cambio": "Elevaciones laterales en máquina: de cara a la máquina, pecho pegado al respaldo, 20 kg",
+  "motivo": "Sin el pecho pegado el ejercicio era mucho más fácil. En esa máquina el peso que se apunta es el total."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "V7",
+  "cambio": "El último ejercicio del viernes pasa a ser Extensión de tríceps sobre la cabeza con cuerda, 3 × 12–15",
+  "motivo": "La cabeza larga del tríceps se quedaba por debajo de su objetivo de series."
+ },
+ {
+  "fecha": "2026-11-09",
+  "id": "M8",
+  "cambio": "Nuevo el martes: Abducción de cadera en máquina, 2 × 12–15",
+  "motivo": "El glúteo medio no recibía ningún trabajo."
+ }
+]

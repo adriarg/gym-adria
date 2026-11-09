@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['dashboard/**', 'web/**', 'scripts/**', '.github/workflows/**']
+    paths: ['dashboard/**', 'web/**', 'scripts/**', 'tests/**', '.github/workflows/**']
 
 permissions:
   contents: write
@@ -29,6 +29,9 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
+      - name: Probar los cálculos
+        if: github.event_name == 'push'
+        run: node --test tests/*.test.mjs
       - name: Montar la web
         run: node scripts/build-site.mjs
       - name: Leer Strava
