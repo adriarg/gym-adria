@@ -1,0 +1,14 @@
+[
+  {"orden": 1, "patron": "rear delt|reverse fly|face pull", "musculo": "Hombro posterior"},
+  {"orden": 2, "patron": "lateral raise", "musculo": "Hombro lateral"},
+  {"orden": 3, "patron": "calf", "musculo": "Gemelos"},
+  {"orden": 4, "patron": "leg raise|knee raise|crunch|dead bug|plank|twist|ab wheel|sit up", "musculo": "Abdominales"},
+  {"orden": 5, "patron": "leg curl|romanian|deadlift|good morning|nordic", "musculo": "Isquios"},
+  {"orden": 6, "patron": "hip thrust|glute|kick|abduction", "musculo": "Glúteos"},
+  {"orden": 7, "patron": "tricep|skull|pushdown|dip", "musculo": "Tríceps"},
+  {"orden": 8, "patron": "curl", "musculo": "Bíceps"},
+  {"orden": 9, "patron": "shoulder press|overhead press|military|arnold|pike", "musculo": "Hombro anterior"},
+  {"orden": 10, "patron": "row|pulldown|pull down|pullover|pull up|chin up", "musculo": "Espalda"},
+  {"orden": 11, "patron": "chest|bench|floor press|incline|decline|fly|butterfly|pec|push ?up", "musculo": "Pecho"},
+  {"orden": 12, "patron": "squat|leg press|leg extension|lunge|step up|hack", "musculo": "Cuádriceps"}
+]

@@ -1,0 +1,59 @@
+name: Actualizar web con Strava
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['dashboard/**', 'web/**', 'scripts/**', '.github/workflows/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Montar la web
+        run: node scripts/build-site.mjs
+      - name: Leer Strava
+        run: node scripts/sync-strava.mjs
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+      - name: Guardar cambios
+        id: guardar
+        run: |
+          git config user.name "gym-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data-cache
+          if git diff --cached --quiet; then
+            echo "cambios=no" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Datos de Strava $(date -u +%FT%RZ)" && git push
+            echo "cambios=si" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Preparar la web
+        if: steps.guardar.outputs.cambios == 'si' || github.event_name != 'schedule'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Publicar
+        id: deploy
+        if: steps.guardar.outputs.cambios == 'si' || github.event_name != 'schedule'
+        uses: actions/deploy-pages@v4

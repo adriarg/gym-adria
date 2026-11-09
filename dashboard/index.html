@@ -1,0 +1,165 @@
+<meta name="dash-one-writer">
+<link rel="stylesheet" href="estilos.css">
+<script src="anatomia.js"></script>
+<script src="fotos.js"></script>
+
+<div class="mg">
+  <header class="mg-head" id="top">
+    <span class="mg-eyebrow">Mast Fitness · Bloque 1</span>
+    <h1 class="mg-title">Mast Gym · Adrià</h1>
+    <p class="mg-lead">Semana del <b data-draw="t-semana">—</b>: llevas <b data-draw="t-ses" data-source="semanas">—</b> de <b data-draw="t-pses" data-source="plan_total">—</b> sesiones y <b data-draw="t-series" data-source="semanas">—</b> de <b data-draw="t-plan" data-source="plan_total">—</b> series efectivas.</p>
+    <nav class="mg-nav" role="tablist" aria-label="Secciones">
+      <button class="mg-navbtn" role="tab" type="button" data-page="entreno" aria-selected="true">Entreno</button>
+      <button class="mg-navbtn" role="tab" type="button" data-page="semana" aria-selected="false">Mi semana</button>
+      <button class="mg-navbtn" role="tab" type="button" data-page="progreso" aria-selected="false">Progreso</button>
+      <button class="mg-navbtn" role="tab" type="button" data-page="musculos" aria-selected="false">Músculos</button>
+      <button class="mg-navbtn" role="tab" type="button" data-page="corredor" aria-selected="false">Corredor</button>
+    </nav>
+  </header>
+
+  <section class="mg-page" id="entreno" data-pagepanel="entreno">
+    <div class="mg-days" role="tablist" aria-label="Día de la rutina">
+      <button class="mg-day" role="tab" type="button" data-dia="Lunes" aria-selected="true">Lunes<small>Torso A</small></button>
+      <button class="mg-day" role="tab" type="button" data-dia="Martes" aria-selected="false">Martes<small>Pierna + core</small></button>
+      <button class="mg-day" role="tab" type="button" data-dia="Jueves" aria-selected="false">Jueves<small>Torso B</small></button>
+      <button class="mg-day" role="tab" type="button" data-dia="Viernes" aria-selected="false">Viernes<small>Brazos + hombros</small></button>
+    </div>
+    <p class="mg-banner" id="banner-bloque" data-draw="bloque">—</p>
+    <div class="mg-card mg-warm" id="calentamiento-general">
+      <img alt="Bicicletas Life Fitness de Mast" data-draw="foto" data-foto="4x-bicicletas-estatica-ic5">
+      <div>
+        <h3 class="mg-card-title">Calentamiento general</h3>
+        <p class="mg-note">5 minutos de bici o elíptica suave antes de empezar. Después, cada ejercicio te dice si necesita series de aproximación. Esas series no cuentan: márcalas como calentamiento (W) en Hevy.</p>
+      </div>
+    </div>
+    <ol class="mg-exlist" id="rutina-lunes" data-panel="Lunes" data-draw="rutina-dia" data-dia="Lunes" data-source="rutina sugerencias partes"></ol>
+    <ol class="mg-exlist" id="rutina-martes" data-panel="Martes" data-draw="rutina-dia" data-dia="Martes" data-source="rutina sugerencias partes" hidden></ol>
+    <ol class="mg-exlist" id="rutina-jueves" data-panel="Jueves" data-draw="rutina-dia" data-dia="Jueves" data-source="rutina sugerencias partes" hidden></ol>
+    <ol class="mg-exlist" id="rutina-viernes" data-panel="Viernes" data-draw="rutina-dia" data-dia="Viernes" data-source="rutina sugerencias partes" hidden></ol>
+    <p class="mg-note">El peso de hoy sale de tu última sesión en Hevy: si hiciste el tope de reps en todas las series, sube; si no, repite. Apunta siempre igual (en las máquinas de discos, por ejemplo, solo los discos de un lado).</p>
+  </section>
+
+  <section class="mg-page" id="semana" data-pagepanel="semana" hidden>
+    <div class="mg-row">
+      <h2 class="mg-h2">Mi semana</h2>
+      <select class="dash-select mg-select" aria-label="Semana" data-draw="sel-semana" data-source="semanas"></select>
+    </div>
+    <div class="mg-tiles">
+      <div class="mg-tile" style="--tc: var(--g-espalda)"><span class="mg-tile-label">Sesiones</span><span class="mg-big dash-skeleton" data-draw="k-ses" data-source="semanas plan_total">—</span></div>
+      <div class="mg-tile" style="--tc: var(--g-biceps)"><span class="mg-tile-label">Series efectivas</span><span class="mg-big dash-skeleton" data-draw="k-series" data-source="semanas plan_total">—</span></div>
+      <div class="mg-tile" style="--tc: var(--g-pierna)"><span class="mg-tile-label">Racha en Mast (desde el 2 nov)</span><span class="mg-big dash-skeleton" data-draw="k-racha" data-source="racha_gym">—</span></div>
+      <div class="mg-tile" style="--tc: var(--g-hombro)"><span class="mg-tile-label">Sesiones en Mast en total</span><span class="mg-big dash-skeleton" data-draw="k-mast" data-source="resumen">—</span></div>
+    </div>
+    <div class="mg-card" id="card-musculos">
+      <h3 class="mg-card-title">Series efectivas por músculo</h3>
+      <p class="mg-note">Barra de color: lo que llevas esta semana. Contorno discontinuo: lo que pide la rutina. Se actualiza con cada entreno que sube Hevy.</p>
+      <ul class="mg-legend">
+        <li><span class="mg-sw" style="background: var(--g-pecho)"></span>Pecho</li>
+        <li><span class="mg-sw" style="background: var(--g-espalda)"></span>Espalda</li>
+        <li><span class="mg-sw" style="background: var(--g-hombro)"></span>Hombro</li>
+        <li><span class="mg-sw" style="background: var(--g-biceps)"></span>Bíceps</li>
+        <li><span class="mg-sw" style="background: var(--g-triceps)"></span>Tríceps</li>
+        <li><span class="mg-sw" style="background: var(--g-abdomen)"></span>Abdomen</li>
+        <li><span class="mg-sw" style="background: var(--g-pierna)"></span>Pierna</li>
+        <li><span class="mg-sw mg-sw-plan"></span>Plan</li>
+      </ul>
+      <div class="mg-chart" id="chart-musculos" data-draw="musc" data-source="musculo_semana plan_musculo"></div>
+    </div>
+  </section>
+
+  <section class="mg-page" id="progreso" data-pagepanel="progreso" hidden>
+    <div class="mg-row">
+      <h2 class="mg-h2">Progreso por ejercicio</h2>
+      <select class="dash-select mg-select" aria-label="Ejercicio" data-draw="sel-ej" data-source="ejercicios"></select>
+    </div>
+    <div class="mg-grid">
+      <div class="mg-card" id="card-progreso">
+        <h3 class="mg-card-title">Fuerza estimada en cada sesión</h3>
+        <p class="mg-note">La fuerza estimada (1RM) es el peso máximo que podrías levantar una sola vez. No hace falta probarlo: la calculo con tu mejor serie de cada sesión. Si la línea sube, estás más fuerte.</p>
+        <div class="mg-chart" id="chart-progreso" data-draw="ej-chart" data-source="progreso"></div>
+      </div>
+      <div class="mg-card" id="card-ejercicios">
+        <h3 class="mg-card-title">Tus ejercicios en Mast</h3>
+        <p class="mg-note">Pulsa una fila para ver su gráfica.</p>
+        <div class="mg-tablebox">
+          <table class="mg-table" data-source="ejercicios" data-row-key="ejercicio">
+            <thead><tr><th data-field="ejercicio">Ejercicio</th><th data-field="musculo" class="mg-hide-narrow">Músculo</th><th data-field="sesiones" class="mg-n">Sesiones</th><th data-field="ultimo_top">Última mejor serie</th><th data-field="cambio" class="mg-n">Cambio</th></tr></thead>
+            <tbody data-draw="ej-tabla"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mg-page" id="musculos" data-pagepanel="musculos" hidden>
+    <div class="mg-row">
+      <div>
+        <h2 class="mg-h2">Músculos</h2>
+        <p class="mg-sub">Cada parte de cada músculo: dónde está, cuánto le da la rutina (plan) y cuánto llevas en la semana elegida en "Mi semana".</p>
+      </div>
+      <select class="dash-select mg-select" aria-label="Grupo muscular" data-draw="sel-grupo" data-source="cobertura"></select>
+    </div>
+    <div class="mg-explain">
+      <div><b>Directa</b>El músculo es el protagonista del ejercicio. Ejemplo: el curl de bíceps es directo para el bíceps.</div>
+      <div><b>Indirecta</b>El músculo ayuda, pero no es el protagonista. Ejemplo: en el jalón al pecho el bíceps ayuda a tirar. Cuenta la mitad.</div>
+      <div><b>Efectiva</b>Directas + la mitad de las indirectas. Es el número que importa para crecer.</div>
+      <div><b>Plan y esta semana</b>"Plan" es lo que te da la rutina si la haces entera. "Esta semana" se llena con lo que subes a Hevy.</div>
+    </div>
+    <div class="mg-grid">
+      <div class="mg-card" id="card-mapa">
+        <h3 class="mg-card-title">Mapa del cuerpo</h3>
+        <p class="mg-note">Delante y detrás, con el color de cada grupo. El mismo color se usa en toda la página.</p>
+        <div data-draw="mapa-grupos"></div>
+      </div>
+      <ul class="mg-estados" id="cobertura-estados" data-draw="cob-estados" data-source="cobertura_estado"></ul>
+    </div>
+    <div class="mg-card" id="card-cobertura">
+      <h3 class="mg-card-title">Todas las partes, una a una</h3>
+      <p class="mg-note">Barra: series efectivas del plan por semana; raya: el objetivo para tu prioridad.</p>
+      <div class="mg-tablebox">
+        <table class="mg-table mg-cob" data-source="cobertura" data-row-key="id">
+          <thead><tr>
+            <th>Dónde</th><th data-field="parte">Parte</th><th data-field="prioridad">Prioridad</th>
+            <th data-field="directas" class="mg-n">Directas</th><th data-field="indirectas" class="mg-n">Indirectas</th><th data-field="efectivas">Efectivas (plan)</th>
+            <th class="mg-n">Esta semana</th><th data-field="dias" class="mg-n">Días</th>
+            <th data-field="estado">Estado</th><th data-field="porque" class="mg-hide-narrow">Qué aporta / por qué</th><th data-field="ejercicios" class="mg-hide-narrow">Ejercicios</th>
+          </tr></thead>
+          <tbody data-draw="cob-tabla" data-source="cobertura_real partes"></tbody>
+        </table>
+      </div>
+      <p class="mg-note">"Esta semana" solo cuenta ejercicios que están en la rutina.</p>
+    </div>
+  </section>
+
+  <section class="mg-page" id="corredor" data-pagepanel="corredor" hidden>
+    <h2 class="mg-h2">De corredor a gimnasio</h2>
+    <div class="mg-grid">
+      <div class="mg-card" id="card-transicion">
+        <h3 class="mg-card-title">Km corridos y sesiones de fuerza por semana</h3>
+        <p class="mg-note">Desde agosto, con datos de Strava.</p>
+        <div class="mg-chart" style="min-height: 300px" id="chart-transicion" data-draw="trans" data-source="transicion"></div>
+      </div>
+      <div class="mg-card" id="card-marcas">
+        <h3 class="mg-card-title">Tus marcas corriendo</h3>
+        <table class="mg-table" data-source="marcas_fmt" data-row-key="tipo">
+          <thead><tr><th data-field="prueba">Distancia</th><th data-field="tiempo" class="mg-n">Tiempo</th><th data-field="fecha" class="mg-n">Fecha</th></tr></thead>
+          <tbody data-draw="marcas-tabla"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <details id="metodo">
+    <summary>Cómo se calcula cada número</summary>
+    <dl>
+      <dt>Datos</dt><dd>Hevy sube cada entreno a Strava con todas las series. Esta página lee tu Strava cada vez que la abres.</dd>
+      <dt>Serie efectiva</dt><dd>Cualquier serie no marcada como calentamiento. En la tabla de músculos, las indirectas cuentan la mitad.</dd>
+      <dt>Fuerza estimada (1RM)</dt><dd>Peso × (1 + reps / 30), fórmula de Epley, con tu mejor serie de la sesión.</dd>
+      <dt>Peso de hoy</dt><dd>Si en la última sesión hiciste el tope del rango en todas las series, sube un escalón. Si estás dentro del rango, repite. Si no, se calcula desde tu fuerza estimada para que hagas el rango con 2 reps de margen.</dd>
+      <dt>Semanas</dt><dd>De lunes a domingo. La racha cuenta semanas seguidas con al menos una sesión en Mast desde el 2 de noviembre.</dd>
+    </dl>
+  </details>
+</div>
+
+<script src="calculos.js"></script>
+<script src="vistas.js"></script>
