@@ -2,25 +2,31 @@ name: Actualizar web con Strava
 
 on:
   schedule:
-    # Minutos 3, 8, 13… : GitHub va más saturado en los múltiplos de 5 y en punto.
-    - cron: '3-58/5 * * * *'
+    # El reloj de GitHub no es de fiar (en este repo no ha saltado nunca). Se deja una vez por hora
+    # solo como red de seguridad: si algún día salta, vuelve a arrancar la cadena de relevos.
+    - cron: '17 * * * *'
   workflow_dispatch:
+    inputs:
+      cadena:
+        description: 'Lanzado por el relevo automático (no marcar a mano)'
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ['dashboard/**', 'web/**', 'scripts/**', 'tests/**', '.github/workflows/**']
 
 permissions:
   contents: write
+  actions: write
   pages: write
   id-token: write
-
-concurrency:
-  group: sync
-  cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    concurrency:
+      group: sync
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -54,11 +60,31 @@ jobs:
             echo "cambios=si" >> "$GITHUB_OUTPUT"
           fi
       - name: Preparar la web
-        if: steps.guardar.outputs.cambios == 'si' || github.event_name != 'schedule'
+        if: steps.guardar.outputs.cambios == 'si' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.cadena)
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
       - name: Publicar
         id: deploy
-        if: steps.guardar.outputs.cambios == 'si' || github.event_name != 'schedule'
+        if: steps.guardar.outputs.cambios == 'si' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.cadena)
         uses: actions/deploy-pages@v4
+
+  # Relevo: como el reloj de GitHub no salta, cada ejecución espera unos minutos y lanza la siguiente.
+  # Los push no entran en la cadena (si no, cada cambio crearía una cadena nueva).
+  relevo:
+    if: always() && github.event_name != 'push'
+    needs: sync
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Esperar y lanzar la siguiente
+        run: |
+          sleep 240
+          # Si hay otra ejecución más nueva de la cadena en marcha, esta se retira para no duplicarla.
+          otras=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/sync.yml/runs?per_page=30"             --jq "[.workflow_runs[] | select(.status != \"completed\" and .event != \"push\" and .id > $GITHUB_RUN_ID)] | length")
+          if [ "$otras" -gt 0 ]; then
+            echo "Ya hay una ejecución más nueva: no lanzo otra."
+          else
+            gh workflow run sync.yml --repo "$GITHUB_REPOSITORY" --ref main -f cadena=true
+          fi

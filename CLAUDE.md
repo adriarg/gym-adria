@@ -23,12 +23,16 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 
 ## Cómo funciona la web pública
 - URL: https://adriarg.github.io/gym-adria/ (GitHub Pages, sin login). Repo público `adriarg/gym-adria`: no subas nada privado.
-- Datos: Hevy sube cada entreno a Strava con las series en la descripción ("Set N: X kg x R [Warm-up]/[Failure]"). `.github/workflows/sync.yml` corre cada 5 min y:
+- Datos: Hevy sube cada entreno a Strava con las series en la descripción ("Set N: X kg x R [Warm-up]/[Failure]"). `.github/workflows/sync.yml` corre cada ~5 min (relevándose a sí mismo, ver más abajo) y:
   1. `scripts/build-site.mjs` monta `docs/` a partir de `dashboard/` (página, cálculos, vistas, JSON) y `web/` (piezas solo de la web).
   2. `scripts/sync-strava.mjs` lee la API de Strava (secrets `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`) y escribe `docs/data/gym.json` y `carreras.json`.
   3. Si algo cambió, hace commit y publica la web.
 - Un push que toque `dashboard/`, `web/`, `scripts/` o el workflow vuelve a publicar la web sola en 2–3 min. No edites `docs/` a mano: se regenera.
 - `web/shim.js` imita el motor `dash` de la dashboard de Claude (`dash.calc`, `dash.loader`, `dash.draw`, `dash.data`, `dash.params`…), así que `dashboard/calculos.js` y `dashboard/vistas.js` funcionan igual en los dos sitios. `web/diario.js` añade la pestaña "Entrenos hechos".
+- Piezas solo de la web (en `web/`): `analisis.js` (cálculos `records`, `tendencia`, `cumplimiento` y `mgNotas()`, que saca las notas que Adrià escribe en Hevy), `resumen.js` (pestaña "Resumen" para el entrenador, enlace directo `…/#resumen`: plan frente a lo hecho, cómo va cada ejercicio y cambios de la rutina) y `diario.js` (pestaña "Entrenos hechos", récords en dorado y la línea de frescura, que pregunta a la API pública de GitHub cuándo fue la última ejecución correcta y avisa si pasa de 45 min).
+- Cada cambio de la rutina se apunta también en `dashboard/cambios.json` (`fecha`, `id`, `cambio`, `motivo`): sale en la pestaña Resumen para que el entrenador sepa qué cambió y por qué.
+- Pruebas: `node --test tests/*.test.mjs` (el workflow las lanza en cada push; si fallan, no se publica). Lánzalas antes de subir.
+- El `schedule` de GitHub no ha saltado nunca en este repo, así que el workflow se releva solo: el job `relevo` espera 4 min y lanza la siguiente ejecución (`workflow_dispatch` con `cadena=true`). Los push no entran en la cadena. Si la cadena se rompe (no hay ejecuciones recientes en `gh run list -R adriarg/gym-adria`), se rearranca con `gh workflow run sync.yml -R adriarg/gym-adria`; la web avisa en naranja cuando pasan más de 45 min sin comprobar Strava.
 - Las marcas corriendo son fijas en `docs/data/marcas.json` (Strava no da los récords absolutos por la API).
 - Los campos lista de los JSON (`principal`, `secundario`, `mapa`) pueden llegar como texto JSON en la dashboard de Claude: léelos siempre con `mgLista()`.
 - Antes de subir, prueba la web: `node scripts/build-site.mjs` y sirve `docs/` (por ejemplo `python -m http.server --directory docs`); sin `docs/data/gym.json` la página sale vacía.
