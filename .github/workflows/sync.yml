@@ -2,7 +2,8 @@ name: Actualizar web con Strava
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    # Minutos 3, 8, 13… : GitHub va más saturado en los múltiplos de 5 y en punto.
+    - cron: '3-58/5 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
