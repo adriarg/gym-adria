@@ -24,10 +24,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
       - name: Montar la web
         run: node scripts/build-site.mjs
       - name: Leer Strava
@@ -41,6 +41,7 @@ jobs:
         run: |
           git config user.name "gym-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p data-cache
           git add docs data-cache
           if git diff --cached --quiet; then
             echo "cambios=no" >> "$GITHUB_OUTPUT"
