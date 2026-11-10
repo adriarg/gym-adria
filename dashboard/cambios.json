@@ -40,5 +40,23 @@
   "id": "M8",
   "cambio": "Nuevo el martes: Abducción de cadera en máquina, 2 × 12–15",
   "motivo": "El glúteo medio no recibía ningún trabajo."
+ },
+ {
+  "fecha": "2026-11-10",
+  "id": "M6",
+  "cambio": "Martes: Elevaciones laterales en polea → Elevaciones laterales en máquina (la misma del lunes y el viernes), 3 × 10–15",
+  "motivo": "Las poleas suelen estar ocupadas y la técnica con polea le resultaba confusa. Repetir la misma máquina no resta músculo y hace más fácil ver si progresa."
+ },
+ {
+  "fecha": "2026-11-10",
+  "id": "M7",
+  "cambio": "Martes: Elevaciones de piernas en paralelas → Crunch en máquina (el mismo del jueves), 3 × 10–15",
+  "motivo": "Le gusta el crunch en máquina y se puede cargar con peso y progresar; en las elevaciones de piernas trabajan sobre todo los flexores de cadera."
+ },
+ {
+  "fecha": "2026-11-10",
+  "id": "V6",
+  "cambio": "Viernes: Elevaciones laterales pasan a 3 × 10–15 en la máquina Hammer Select (como lunes y martes)",
+  "motivo": "Es el mismo ejercicio en Hevy los tres días; con el mismo rango de reps el peso sugerido vale para todos."
  }
 ]
