@@ -1,6 +1,6 @@
 # Proyecto gimnasio de Adrià
 
-Habla siempre en español y tutea. Adrià no es programador: explícale los resultados en lenguaje llano.
+Habla siempre en español y tutea. Adrià no es programador: explícale los resultados en lenguaje llano. Respuestas cortas: si escribes mucho texto lo lee por encima.
 
 ## Quién es Adrià (a 2026-11-09)
 - 24,5 años, 1,75 m, 70 kg. Sin lesiones (tuvo una sobrecarga de sóleo en oct 2026 por no descansar).
@@ -15,6 +15,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 
 ## La rutina
 - Bloque 1: 2026-11-09 → 2026-12-20; semana de descarga la del 2026-12-21. Al acabar, revisar series por músculo y progresión y preparar el bloque 2.
+- Su entrenadora (2026-11-10) quiere que aprenda bien los ejercicios básicos con barra libre (peso muerto, peso muerto rumano, sentadilla, zancadas): sirven en cualquier gimnasio y enseñan a apretar el tronco. El rumano se queda en el bloque 1; en el bloque 2 mete sentadilla con barra y zancadas, con poco peso y técnica primero.
 - L Torso A · M Pierna + core · J Torso B · V Brazos + hombros. 29 ejercicios, 81 series/semana.
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
