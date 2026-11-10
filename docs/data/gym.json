@@ -1,6 +1,17 @@
 {
  "activities": [
   {
+   "id": 20938356045,
+   "name": "2. Pierna + Core",
+   "sport_type": "WeightTraining",
+   "start_local": "2026-11-10T20:24:32",
+   "description": "Logged with hevyapp.com\n\nPendulum Squat (Machine)\n\"descanso entre warm up? pesa màquina 36,7kgs, peso series es suma ambos lados\"\nSet 1: 10 kg x 10 [Warm-up]\nSet 2: 10 kg x 12 [Warm-up]\nSet 3: 20 kg x 16 \nSet 4: 25 kg x 17 \nSet 5: 30 kg x 12 \n\nStanding Leg Curls\n\"cada serie hacer dos piernas\n\ntengo mas fuerza en la izquierda\"\nSet 1: 25 kg x 10 \nSet 2: 27.5 kg x 12 \n\nRomanian Deadlift (Barbell)\n\"dolor lumbar, tecnica mejorable\"\nSet 1: 0 kg x 10 [Warm-up]\nSet 2: 10 kg x 10 \nSet 3: 10 kg x 12 \n\nLeg Extension (Machine)\nSet 1: 52.5 kg x 18 \nSet 2: 60 kg x 15 \n\nHip Abduction (Machine)\nSet 1: 63.5 kg x 20 \nSet 2: 70.5 kg x 14 \n\nLateral Raise (Cable)\nSet 1: 20 kg x 10 [Warm-up]\nSet 2: 25 kg x 10 \nSet 3: 25 kg x 10 \nSet 4: 25 kg x 10 \n\nCrunch (Machine)\nSet 1: 20 kg x 15 \nSet 2: 25 kg x 8 \nSet 3: 20 kg x 9 \n",
+   "summary": {
+    "moving_time": 4873,
+    "distance": 0
+   }
+  },
+  {
    "id": 20923748897,
    "name": "1. Torso A",
    "sport_type": "WeightTraining",
