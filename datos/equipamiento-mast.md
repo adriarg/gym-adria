@@ -4,6 +4,21 @@ Fuente: https://mastfitness.es/equipamiento (catálogo 2026, leído el 2026-11-0
 Carrer del Comte Borrell 241 · L–V 07:00–23:00 · Sáb 8–21 · Dom 9–18.
 Centro Hammer Strength Black Level (+50 máquinas Hammer).
 
+## Peso propio de las máquinas (etiqueta "Start", fotos de Adrià 2026-11-11)
+Adrià apunta en Hevy/Strava solo los discos que carga, sin el peso de la máquina.
+Peso real = discos apuntados + peso de la máquina. Al recomendar un peso total, dile los discos: total − peso de la máquina.
+En las Iso-Lateral el peso de la etiqueta es por brazo.
+
+| Máquina (nombre exacto de la etiqueta) | Peso propio | Músculos según la etiqueta | En la rutina |
+|---|---|---|---|
+| Hammer Strength Iso-Lateral Shoulder Press | 4,5 kg | Deltoides anterior y tríceps | J3 |
+| Hammer Strength Iso-Lateral Incline Press | 3,6 kg | Pectoral superior, deltoides anterior, tríceps | L3 |
+| Hammer Strength Iso-Lateral Row | 5,4 kg | Dorsal, trapecio, romboides, deltoides posterior | — |
+| Hammer Strength Iso-Lateral Decline Press | 2,7 kg | Pectoral inferior, tríceps | — |
+| Hammer Strength Iso-Lateral High Row | 0,9 kg | Dorsal alto, trapecio, romboides | L4, J2 |
+
+Pendiente: Adrià mandará fotos de más máquinas.
+
 ## Pecho
 - Hammer Iso-Lateral Decline Press (plate) — pectoral inferior
 - Hammer Iso-Lateral Incline Press HG (plate) — pectoral superior + deltoides anterior

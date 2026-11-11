@@ -20,6 +20,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
+- En Hevy/Strava Adrià apunta solo los discos, sin el peso propio de la máquina. La tabla "Peso propio de las máquinas" de `datos/equipamiento-mast.md` da ese peso: súmalo para saber la carga real y, al recomendar un peso, dile cuántos discos poner (total − máquina). Usa los nombres exactos de las etiquetas. Cuando mande fotos de otras máquinas, añádelas a esa tabla.
 - No tiene Hevy Pro, así que no hay API de Hevy: las rutinas en Hevy las cambia él a mano. Cuando cambies un ejercicio, recuérdale qué tocar en Hevy (el nombre exacto está en el campo `hevy`).
 
 ## Cómo funciona la web pública
