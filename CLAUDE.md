@@ -42,6 +42,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 ## Sesiones y GitHub
 - Adrià autoriza que fusiones tú mismo tus PR (merge) cuando las pruebas pasen, sin esperarle.
 - Todo lo que se aprenda y deba durar va a GitHub (este archivo, `datos/`, `dashboard/`): cada sesión nueva debe arrancar sabiéndolo todo.
+- Cualquier dato nuevo de Adrià, por pequeño que sea (una preferencia, una molestia, una máquina, un cambio de horario…), se apunta en el archivo que toque y se sube a GitHub en ese mismo momento, sin esperar al final de la sesión.
 - La sesión se compacta sola a los 300k tokens; un aviso cuenta las compactaciones. A partir de la 2ª, dile a Adrià que abra una sesión nueva.
 
 ## La dashboard dentro de Claude
