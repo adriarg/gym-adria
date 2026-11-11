@@ -214,6 +214,10 @@ dash.calc('sugerencias', {
   }
 });
 
+const MG_DIAS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+// Ejercicios de la rutina ordenados por día y orden dentro del día (las directas antes que las indirectas).
+const mgOrdenDias = (l) => l.slice().sort((a, b) => (b.directa - a.directa) || (MG_DIAS.indexOf(a.dia) - MG_DIAS.indexOf(b.dia)) || (a.orden - b.orden));
+
 dash.calc('cobertura', {
   title: 'Cobertura por parte del músculo',
   description: 'Series semanales del plan que llegan a cada parte del músculo: directas, indirectas (cuentan la mitad), días y estado frente al objetivo.',
@@ -222,14 +226,14 @@ dash.calc('cobertura', {
     const est = {};
     for (const p of partes) est[p.id] = {directas: 0, indirectas: 0, dias: new Set(), ej: []};
     for (const r of rutina) {
-      for (const id of mgLista(r.principal)) if (est[id]) { est[id].directas += r.series; est[id].dias.add(r.dia); est[id].ej.push(r.ejercicio); }
-      for (const id of mgLista(r.secundario)) if (est[id]) { est[id].indirectas += r.series; est[id].dias.add(r.dia); }
+      for (const id of mgLista(r.principal)) if (est[id]) { est[id].directas += r.series; est[id].dias.add(r.dia); est[id].ej.push({dia: r.dia, orden: r.orden, ejercicio: r.ejercicio, series: r.series, directa: true}); }
+      for (const id of mgLista(r.secundario)) if (est[id]) { est[id].indirectas += r.series; est[id].dias.add(r.dia); est[id].ej.push({dia: r.dia, orden: r.orden, ejercicio: r.ejercicio, series: r.series, directa: false}); }
     }
     return partes.slice().sort((a, b) => a.orden - b.orden).map((p) => {
       const e = est[p.id];
       const efectivas = e.directas + e.indirectas / 2;
       const estado = p.objetivo === 0 ? (efectivas > 0 ? 'Le llega de rebote' : 'No lo necesitas') : efectivas === 0 ? 'Sin trabajo' : efectivas >= p.objetivo ? 'Cubierto' : 'Por debajo';
-      return {id: p.id, grupo: p.grupo, parte: p.parte, prioridad: p.prioridad, objetivo: p.objetivo, directas: e.directas, indirectas: e.indirectas, efectivas, dias: e.dias.size, estado, porque: p.porque || p.aporta, ejercicios: e.ej.filter((x, i, a) => a.indexOf(x) === i).join(', ')};
+      return {id: p.id, grupo: p.grupo, parte: p.parte, prioridad: p.prioridad, objetivo: p.objetivo, directas: e.directas, indirectas: e.indirectas, efectivas, dias: e.dias.size, estado, porque: p.porque || p.aporta, ejercicios: mgOrdenDias(e.ej).map((x) => x.dia + ': ' + x.ejercicio + ' (' + x.series + (x.directa ? '' : ', indirecta') + ')').join(' · '), ej_lista: mgOrdenDias(e.ej)};
     });
   }
 });
