@@ -44,24 +44,7 @@ dash.loader('gym', {
   }
 });
 
-dash.loader('carreras', {
-  description: 'Una fila por carrera: fecha, nombre, km y minutos en movimiento.',
-  fn: ({answer}) => {
-    const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
-    if (!a || !Array.isArray(a.activities)) throw new Error('Strava no devolvió actividades (claves: ' + Object.keys(a || {}).join(', ') + ')');
-    const rows = a.activities.map((act) => ({fecha: String(act.start_local || '').slice(0, 10), nombre: act.name || '', km: ((act.summary && act.summary.distance) || 0) / 1000, minutos: ((act.summary && act.summary.moving_time) || 0) / 60, actividad: String(act.id)}));
-    return {columns: ['fecha', 'nombre', 'km', 'minutos', 'actividad'], rows, cut: !!a.has_next_page};
-  }
-});
 
-dash.loader('marcas', {
-  description: 'Una fila por marca: tipo de distancia, tiempo en segundos y fecha.',
-  fn: ({answer}) => {
-    const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
-    if (!a || !Array.isArray(a.efforts)) throw new Error('Strava no devolvió marcas (claves: ' + Object.keys(a || {}).join(', ') + ')');
-    return {columns: ['tipo', 'segundos', 'fecha'], rows: a.efforts.map((e) => ({tipo: e.best_effort_type, segundos: Number(e.value), fecha: e.date}))};
-  }
-});
 
 dash.calc('series', {
   title: 'Series con músculo y semana',
@@ -238,6 +221,47 @@ dash.calc('cobertura', {
   }
 });
 
+dash.calc('frecuencia', {
+  title: 'Cuántas veces tocas cada músculo en tu rutina',
+  description: 'Por músculo y por parte: series efectivas del plan cada día de entreno, y cuántos días a la semana le llega trabajo directo y en total.',
+  inputs: ['rutina', 'partes'],
+  fn: (rutina, partes) => {
+    const dias = MG_DIAS.filter((d) => rutina.some((r) => r.dia === d));
+    const nuevo = () => Object.fromEntries(dias.map((d) => [d, {dir: 0, ind: 0, ej: []}]));
+    const porParte = {}, porGrupo = {};
+    for (const p of partes) { porParte[p.id] = nuevo(); porGrupo[p.grupo] = porGrupo[p.grupo] || nuevo(); }
+    const grupoDe = Object.fromEntries(partes.map((p) => [p.id, p.grupo]));
+    for (const r of rutina) {
+      const sumar = (ids, campo) => {
+        const gs = new Set();
+        for (const id of ids) if (porParte[id]) { porParte[id][r.dia][campo] += r.series; porParte[id][r.dia].ej.push(r.ejercicio); gs.add(grupoDe[id]); }
+        return gs;
+      };
+      const gDir = sumar(mgLista(r.principal), 'dir'), gInd = sumar(mgLista(r.secundario), 'ind');
+      // Un ejercicio cuenta una sola vez para el grupo: directo si es protagonista de alguna de sus partes.
+      for (const g of gDir) { porGrupo[g][r.dia].dir += r.series; porGrupo[g][r.dia].ej.push(r.ejercicio); }
+      for (const g of gInd) if (!gDir.has(g)) { porGrupo[g][r.dia].ind += r.series; porGrupo[g][r.dia].ej.push(r.ejercicio + ' (de rebote)'); }
+    }
+    const fila = (base, m) => {
+      const out = Object.assign({}, base, {dias_directos: 0, dias_total: 0});
+      for (const d of dias) {
+        const x = m[d];
+        out[d] = {efectivas: x.dir + x.ind / 2, directo: x.dir > 0, ejercicios: x.ej.filter((e, i, a) => a.indexOf(e) === i)};
+        if (x.dir > 0) out.dias_directos++;
+        if (x.dir + x.ind > 0) out.dias_total++;
+      }
+      return out;
+    };
+    const out = [];
+    const orden = partes.slice().sort((a, b) => a.orden - b.orden);
+    for (const g of orden.map((p) => p.grupo).filter((g, i, a) => a.indexOf(g) === i)) {
+      out.push(fila({clave: 'g:' + g, tipo: 'grupo', grupo: g, nombre: g, dias}, porGrupo[g]));
+      for (const p of orden.filter((p) => p.grupo === g)) out.push(fila({clave: p.id, tipo: 'parte', grupo: g, nombre: p.parte, dias}, porParte[p.id]));
+    }
+    return out;
+  }
+});
+
 dash.calc('cobertura_real', {
   title: 'Cobertura real por semana',
   description: 'Series efectivas que de verdad llegaron a cada parte del músculo cada semana, con los ejercicios de la rutina apuntados en Hevy.',
@@ -268,31 +292,4 @@ dash.calc('cobertura_estado', {
   }).filter((r) => r.partes > 0)
 });
 
-dash.calc('transicion', {
-  title: 'Km y sesiones de fuerza por semana',
-  description: 'Km corridos y sesiones de fuerza de cada semana, de lunes a domingo, desde agosto.',
-  inputs: ['carreras', 'gym'],
-  fn: (carreras, gym) => {
-    const lunes = (f) => { const d = new Date(f + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() - (d.getUTCDay() + 6) % 7); return d.toISOString().slice(0, 10); };
-    const km = {}, ses = {}, vistas = {};
-    for (const c of carreras) { const w = lunes(c.fecha); km[w] = (km[w] || 0) + c.km; }
-    for (const g of gym) { if (vistas[g.actividad]) continue; vistas[g.actividad] = 1; const w = lunes(g.fecha); ses[w] = (ses[w] || 0) + 1; }
-    const todas = Object.keys(km).concat(Object.keys(ses)).sort();
-    if (!todas.length) return [];
-    const out = [], d = new Date(todas[0] + 'T00:00:00Z'), fin = todas[todas.length - 1];
-    while (d.toISOString().slice(0, 10) <= fin) { const w = d.toISOString().slice(0, 10); out.push({semana: w, km: Math.round((km[w] || 0) * 10) / 10, sesiones_fuerza: ses[w] || 0}); d.setUTCDate(d.getUTCDate() + 7); }
-    return out;
-  }
-});
 
-dash.calc('marcas_fmt', {
-  title: 'Marcas con nombre y tiempo',
-  description: 'Tus mejores marcas con el nombre de la distancia y el tiempo en horas, minutos y segundos.',
-  inputs: ['marcas'],
-  fn: (marcas) => {
-    const nombres = {FastestMile: 'Milla', Fastest5k: '5 km', Fastest10k: '10 km', FastestHalfMarathon: 'Media maratón', FastestMarathon: 'Maratón'};
-    const orden = Object.keys(nombres);
-    const t = (s) => { const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = Math.round(s % 60); return (h ? h + ':' + String(m).padStart(2, '0') : String(m)) + ':' + String(x).padStart(2, '0'); };
-    return marcas.filter((r) => nombres[r.tipo]).sort((a, b) => orden.indexOf(a.tipo) - orden.indexOf(b.tipo)).map((r) => ({tipo: r.tipo, prueba: nombres[r.tipo], tiempo: t(r.segundos), fecha: r.fecha}));
-  }
-});

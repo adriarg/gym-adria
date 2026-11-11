@@ -89,3 +89,15 @@
 .mg-cob td.mg-ejdia .mg-dia { display: inline-block; min-width: 2.4em; color: var(--color-accent, #4ade80); }
 .mg-cob td.mg-ejdia .mg-ser { color: var(--color-fg-muted); font-size: .85em; }
 .mg-cob td.mg-ejdia .mg-ind { color: var(--color-fg-muted); font-size: .9em; }
+
+.mg-cob .mg-body { width: 76px; height: 72px; }
+.mg-cob .mg-body polygon:not(.mg-body-off) { stroke: var(--color-fg); stroke-width: .6; }
+.mg-frec .mg-c { text-align: center; }
+.mg-frec tr.mg-frec-g { cursor: pointer; }
+.mg-frec tr.mg-frec-g td { font-weight: 700; padding-top: .5rem; padding-bottom: .5rem; }
+.mg-frec tr.mg-frec-p td:first-child { padding-left: 2.2rem; color: var(--color-fg-muted); }
+.mg-frec-fl { display: inline-block; width: 1.2em; color: var(--color-fg-muted); }
+.mg-frec-b { display: inline-block; min-width: 2.4em; padding: .15em .45em; border-radius: 999px; background: var(--c); color: #fff; font-weight: 700; }
+.mg-frec-b.mg-frec-ind { background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--color-fg); font-weight: 500; }
+.mg-frec-n { font-size: 1.05em; font-weight: 800; }
+.mg-frec-n2 { color: var(--color-fg-muted); }

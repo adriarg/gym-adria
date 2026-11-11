@@ -15,8 +15,9 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 
 ## La rutina
 - Bloque 1: 2026-11-09 → 2026-12-20; semana de descarga la del 2026-12-21. Al acabar, revisar series por músculo y progresión y preparar el bloque 2.
-- Su entrenadora (2026-11-10) quiere que aprenda bien los ejercicios básicos con barra libre (peso muerto, peso muerto rumano, sentadilla, zancadas): sirven en cualquier gimnasio y enseñan a apretar el tronco. El rumano se queda en el bloque 1; en el bloque 2 mete sentadilla con barra y zancadas, con poco peso y técnica primero.
-- L Torso A · M Pierna + core · J Torso B · V Brazos + hombros. 29 ejercicios, 81 series/semana.
+- Su entrenadora (2026-11-10) quiere que aprenda bien los ejercicios básicos con barra libre (peso muerto, peso muerto rumano, sentadilla, zancadas): sirven en cualquier gimnasio y enseñan a apretar el tronco. El rumano (martes) y la sentadilla con barra (viernes, desde el 2026-11-11, en el Half Rack) ya están en el bloque 1; en el bloque 2 entran las zancadas, con poco peso y técnica primero.
+- L Torso A · M Pierna + core · J Torso B · V Brazos + hombros + sentadilla. 30 ejercicios, 84 series/semana.
+- Lo que quiere Adrià (2026-11-11): lunes y jueves torso mezclando empuje y tirón, martes pierna; esos 3 son los días fuertes. El viernes es más libre/de enfoque (brazos, hombro) y lleva algo de pierna para no tocarla solo el martes.
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
@@ -35,7 +36,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Cada cambio de la rutina se apunta también en `dashboard/cambios.json` (`fecha`, `id`, `cambio`, `motivo`): sale en la pestaña Resumen para que el entrenador sepa qué cambió y por qué.
 - Pruebas: `node --test tests/*.test.mjs` (el workflow las lanza en cada push; si fallan, no se publica). Lánzalas antes de subir.
 - El `schedule` de GitHub no ha saltado nunca en este repo, así que el workflow se releva solo: el job `relevo` espera 4 min y lanza la siguiente ejecución (`workflow_dispatch` con `cadena=true`). Los push no entran en la cadena. Si la cadena se rompe (no hay ejecuciones recientes en `gh run list -R adriarg/gym-adria`), se rearranca con `gh workflow run sync.yml -R adriarg/gym-adria`; la web avisa en naranja cuando pasan más de 45 min sin comprobar Strava.
-- Las marcas corriendo son fijas en `docs/data/marcas.json` (Strava no da los récords absolutos por la API).
+- La pestaña Corredor se quitó (2026-11-11, a petición de Adrià). La pestaña Músculos muestra los ejercicios de SU rutina con su día y una tabla de cuántas veces toca cada músculo y parte por semana (`frecuencia` en `calculos.js`).
 - Los campos lista de los JSON (`principal`, `secundario`, `mapa`) pueden llegar como texto JSON en la dashboard de Claude: léelos siempre con `mgLista()`.
 - Antes de subir, prueba la web: `node scripts/build-site.mjs` y sirve `docs/` (por ejemplo `python -m http.server --directory docs`); sin `docs/data/gym.json` la página sale vacía.
 
