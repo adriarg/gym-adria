@@ -216,38 +216,69 @@
     "peso_min": 0
   },
   {
-    "id": "M1",
+    "id": "M9",
     "dia": "Martes",
-    "bloque": "Pierna + core",
+    "bloque": "Pierna",
     "orden": 1,
-    "ejercicio": "Sentadilla péndulo",
-    "maquina": "Hammer Pendulum X Squat",
-    "hevy": "Pendulum Squat (Machine)",
+    "ejercicio": "Sentadilla búlgara",
+    "maquina": "Mancuernas + banco plano",
+    "hevy": "Bulgarian Split Squat (Dumbbell)",
     "musculo": "Cuádriceps",
-    "zona": "Cuádriceps y glúteo, sin carga sobre la columna",
+    "zona": "Cuádriceps y glúteo de cada pierna por separado",
     "series": 3,
     "reps": "8–12",
-    "descanso": "2–3 min",
-    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo.",
+    "descanso": "2 min (entre piernas, 30 s)",
+    "nota": "Pie de atrás apoyado en el banco con el empeine. Paso largo: al bajar, la rodilla de delante no se va hacia dentro. Tronco un poco inclinado hacia delante para que trabaje más el glúteo. Empieza siempre por la pierna más floja y haz las mismas reps con la otra. El peso es el de cada mancuerna.",
     "principal": [
       "vastos",
       "glut_max"
     ],
     "secundario": [
+      "aductores",
+      "glut_med",
+      "recto_fem"
+    ],
+    "foto": "mancuernas-uretano-2-50-kg",
+    "calentamiento": "1 serie de 8 por pierna sin peso",
+    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
+    "peso_inicial": 10,
+    "incremento": 2,
+    "peso_min": 0
+  },
+  {
+    "id": "M10",
+    "dia": "Martes",
+    "bloque": "Pierna",
+    "orden": 2,
+    "ejercicio": "Prensa inclinada, pies altos",
+    "maquina": "Hammer Linear Leg Press",
+    "hevy": "Leg Press (Machine)",
+    "musculo": "Cuádriceps",
+    "zona": "Glúteo e isquios, con menos cuádriceps que la prensa normal al subir los pies",
+    "series": 3,
+    "reps": "10–12",
+    "descanso": "2 min",
+    "nota": "Pies en la parte alta de la plataforma, a la anchura de las caderas. Baja hasta que la rodilla se acerque al pecho sin que se levante el culo del respaldo, y empuja con los talones. No bloquees las rodillas arriba. Apunta solo los discos.",
+    "principal": [
+      "glut_max",
+      "isq_largos"
+    ],
+    "secundario": [
+      "vastos",
       "aductores"
     ],
-    "foto": "pendulum-x-squat",
-    "calentamiento": "3 series: 10 reps con un 40 %, 6 con un 60 % y 3 con un 80 % del peso",
-    "esfuerzo": "Nunca al fallo: deja siempre 2–3 reps en reserva.",
-    "peso_inicial": 57.5,
-    "incremento": 5,
+    "foto": "",
+    "calentamiento": "2 series: 10 reps con la mitad del peso y 5 reps con unos tres cuartos",
+    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
+    "peso_inicial": 80,
+    "incremento": 10,
     "peso_min": 0
   },
   {
     "id": "M2",
     "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 2,
+    "bloque": "Pierna",
+    "orden": 3,
     "ejercicio": "Curl femoral sentado",
     "maquina": "Hammer Select Seated Leg Curl",
     "hevy": "Seated Leg Curl (Machine)",
@@ -272,10 +303,38 @@
     "peso_min": 0
   },
   {
+    "id": "M1",
+    "dia": "Martes",
+    "bloque": "Pierna",
+    "orden": 4,
+    "ejercicio": "Sentadilla péndulo",
+    "maquina": "Hammer Pendulum X Squat",
+    "hevy": "Pendulum Squat (Machine)",
+    "musculo": "Cuádriceps",
+    "zona": "Cuádriceps y glúteo, sin carga sobre la columna",
+    "series": 2,
+    "reps": "8–12",
+    "descanso": "2–3 min",
+    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo.",
+    "principal": [
+      "vastos",
+      "glut_max"
+    ],
+    "secundario": [
+      "aductores"
+    ],
+    "foto": "pendulum-x-squat",
+    "calentamiento": "3 series: 10 reps con un 40 %, 6 con un 60 % y 3 con un 80 % del peso",
+    "esfuerzo": "Nunca al fallo: deja siempre 2–3 reps en reserva.",
+    "peso_inicial": 57.5,
+    "incremento": 5,
+    "peso_min": 0
+  },
+  {
     "id": "M3",
     "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 3,
+    "bloque": "Pierna",
+    "orden": 5,
     "ejercicio": "Peso muerto rumano",
     "maquina": "Barra olímpica",
     "hevy": "Romanian Deadlift (Barbell)",
@@ -296,122 +355,16 @@
     ],
     "foto": "barras-olimpicas-discos-uretano",
     "calentamiento": "1 serie de 10 con la barra vacía, despacio, mirando la técnica",
-    "esfuerzo": "Deja 2–3 reps en reserva en todas las series: aquí manda la técnica, no el peso.",
+    "esfuerzo": "Deja 2–3 reps en reserva: va quinto, con las piernas ya cansadas; aquí manda la técnica.",
     "peso_inicial": 20,
     "incremento": 2.5,
     "peso_min": 20
   },
   {
-    "id": "M4",
-    "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 4,
-    "ejercicio": "Extensión de cuádriceps",
-    "maquina": "Hammer MTS Leg Extension",
-    "hevy": "Leg Extension (Machine)",
-    "musculo": "Cuádriceps",
-    "zona": "Recto femoral (la parte del cuádriceps que la sentadilla trabaja menos)",
-    "series": 2,
-    "reps": "10–15",
-    "descanso": "90 s",
-    "nota": "Última serie al fallo.",
-    "principal": [
-      "recto_fem",
-      "vastos"
-    ],
-    "secundario": [],
-    "foto": "mts-leg-extension",
-    "calentamiento": "",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 55,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
-    "id": "M8",
-    "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 5,
-    "ejercicio": "Abducción de cadera",
-    "maquina": "Hammer Select Hip Abduction",
-    "hevy": "Hip Abduction (Machine)",
-    "musculo": "Glúteos",
-    "zona": "Glúteo medio y menor: estabilizan cadera y rodilla al correr",
-    "series": 2,
-    "reps": "12–15",
-    "descanso": "60–90 s",
-    "nota": "Inclínate un poco hacia delante para cargar más el glúteo.",
-    "principal": [
-      "glut_med"
-    ],
-    "secundario": [],
-    "foto": "se-full-hip-abduction",
-    "calentamiento": "",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 62.5,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
-    "id": "M5",
-    "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 6,
-    "ejercicio": "Gemelo sentado",
-    "maquina": "Hammer Seated Calf Raise",
-    "hevy": "Seated Calf Raise",
-    "musculo": "Gemelos",
-    "zona": "Sóleo, el músculo que te sobrecargaste corriendo",
-    "series": 3,
-    "reps": "12–15",
-    "descanso": "60–90 s",
-    "nota": "Pausa de 2 s abajo. Te protege para cuando vuelvas a correr.",
-    "principal": [
-      "soleo"
-    ],
-    "secundario": [
-      "gastrocnemio"
-    ],
-    "foto": "seated-calf-raise",
-    "calentamiento": "1 serie de 15 reps muy ligera",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 20,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
-    "id": "M6",
-    "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 7,
-    "ejercicio": "Elevaciones laterales en máquina",
-    "maquina": "Hammer Select Lateral Raise",
-    "hevy": "Lateral Raise (Machine)",
-    "musculo": "Hombro lateral",
-    "zona": "Deltoides lateral (segunda de las tres veces en la semana)",
-    "series": 3,
-    "reps": "10–15",
-    "descanso": "90 s",
-    "nota": "De cara a la máquina y con el pecho siempre pegado al soporte (sin apoyo es mucho más fácil y deja de valer). Sube con los codos, sin encoger los hombros. Apunta el peso total que marca la máquina.",
-    "principal": [
-      "del_lat"
-    ],
-    "secundario": [
-      "supraesp",
-      "trap_sup"
-    ],
-    "foto": "se-full-lateral-raise",
-    "calentamiento": "1 serie de 12 reps muy ligera",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 20,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
     "id": "M7",
     "dia": "Martes",
-    "bloque": "Pierna + core",
-    "orden": 8,
+    "bloque": "Pierna",
+    "orden": 6,
     "ejercicio": "Crunch en máquina",
     "maquina": "Hammer MTS Abdominal Crunch",
     "hevy": "Crunch (Machine)",
@@ -432,6 +385,32 @@
     "calentamiento": "",
     "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
     "peso_inicial": 17.5,
+    "incremento": 2.5,
+    "peso_min": 0
+  },
+  {
+    "id": "M4",
+    "dia": "Martes",
+    "bloque": "Pierna",
+    "orden": 7,
+    "ejercicio": "Extensión de cuádriceps",
+    "maquina": "Hammer MTS Leg Extension",
+    "hevy": "Leg Extension (Machine)",
+    "musculo": "Cuádriceps",
+    "zona": "Recto femoral (la parte del cuádriceps que la sentadilla trabaja menos)",
+    "series": 2,
+    "reps": "10–15",
+    "descanso": "90 s",
+    "nota": "Última serie al fallo.",
+    "principal": [
+      "recto_fem",
+      "vastos"
+    ],
+    "secundario": [],
+    "foto": "mts-leg-extension",
+    "calentamiento": "",
+    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
+    "peso_inicial": 55,
     "incremento": 2.5,
     "peso_min": 0
   },
@@ -652,7 +631,7 @@
   {
     "id": "V8",
     "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
+    "bloque": "Pierna + brazos",
     "orden": 1,
     "ejercicio": "Sentadilla con barra",
     "maquina": "Barra olímpica en el Half Rack (donde haces el rumano)",
@@ -681,41 +660,10 @@
     "peso_min": 20
   },
   {
-    "id": "V1",
-    "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
-    "orden": 2,
-    "ejercicio": "Fondos en máquina",
-    "maquina": "Hammer Seated Dip",
-    "hevy": "Seated Dip Machine",
-    "musculo": "Tríceps",
-    "zona": "Las 3 cabezas del tríceps, con la carga más alta de la semana",
-    "series": 3,
-    "reps": "8–12",
-    "descanso": "2 min",
-    "nota": "Codos pegados al cuerpo.",
-    "principal": [
-      "tri_lateral",
-      "tri_medial"
-    ],
-    "secundario": [
-      "tri_larga",
-      "pec_cost",
-      "pec_menor",
-      "del_ant"
-    ],
-    "foto": "seated-dip",
-    "calentamiento": "2 series: 10 reps con la mitad del peso y 5 reps con unos tres cuartos",
-    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
-    "peso_inicial": 20,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
     "id": "V2",
     "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
-    "orden": 3,
+    "bloque": "Pierna + brazos",
+    "orden": 2,
     "ejercicio": "Curl de bíceps MTS",
     "maquina": "Hammer MTS Biceps Curl",
     "hevy": "Bicep Curl (Machine)",
@@ -741,9 +689,42 @@
     "peso_min": 0
   },
   {
+    "id": "V9",
+    "dia": "Viernes",
+    "bloque": "Pierna + brazos",
+    "orden": 3,
+    "ejercicio": "Peso muerto convencional",
+    "maquina": "Barra olímpica en la plataforma del Half Rack",
+    "hevy": "Deadlift (Barbell)",
+    "musculo": "Isquios",
+    "zona": "Toda la cadena de atrás: glúteo, isquios y lumbar, con el tronco apretado",
+    "series": 3,
+    "reps": "5–8",
+    "descanso": "2–3 min",
+    "nota": "Barra encima de la mitad del pie, pies a la anchura de las caderas. Agarra la barra justo por fuera de las piernas, pecho arriba y espalda recta. Coge aire, aprieta el abdomen y empuja el suelo con las piernas, con la barra rozando las piernas todo el rato. Arriba, cadera estirada sin echarte atrás. Baja con el mismo control. Si la espalda se redondea, baja peso. Grábate de lado y enséñaselo a tu entrenadora.",
+    "principal": [
+      "glut_max",
+      "isq_largos",
+      "erectores"
+    ],
+    "secundario": [
+      "vastos",
+      "aductores",
+      "trap_sup",
+      "ante_flex",
+      "transverso"
+    ],
+    "foto": "barras-olimpicas-discos-uretano",
+    "calentamiento": "2 series: 8 reps con la barra y discos de 5 kg y 5 reps con unos tres cuartos del peso",
+    "esfuerzo": "Deja 2–3 reps en reserva en todas las series: aquí manda la técnica, no el peso.",
+    "peso_inicial": 40,
+    "incremento": 5,
+    "peso_min": 20
+  },
+  {
     "id": "V3",
     "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
+    "bloque": "Pierna + brazos",
     "orden": 4,
     "ejercicio": "Tríceps en máquina de 3 ángulos",
     "maquina": "Panatta Three Angles Triceps",
@@ -769,10 +750,38 @@
     "peso_min": 0
   },
   {
+    "id": "V10",
+    "dia": "Viernes",
+    "bloque": "Pierna + brazos",
+    "orden": 5,
+    "ejercicio": "Hip thrust en máquina",
+    "maquina": "Hammer Glute Drive",
+    "hevy": "Hip Thrust (Machine)",
+    "musculo": "Glúteos",
+    "zona": "Glúteo mayor, con el músculo acortado (donde la sentadilla no llega)",
+    "series": 3,
+    "reps": "8–12",
+    "descanso": "2 min",
+    "nota": "Espalda alta apoyada, pies planos y espinillas verticales arriba. Sube apretando el glúteo, aguanta 1 s arriba sin arquear la zona lumbar (mira al frente, barbilla un poco metida). Apunta solo los discos.",
+    "principal": [
+      "glut_max"
+    ],
+    "secundario": [
+      "isq_largos",
+      "glut_med"
+    ],
+    "foto": "",
+    "calentamiento": "2 series: 10 reps con la mitad del peso y 5 reps con unos tres cuartos",
+    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
+    "peso_inicial": 40,
+    "incremento": 5,
+    "peso_min": 0
+  },
+  {
     "id": "V4",
     "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
-    "orden": 5,
+    "bloque": "Pierna + brazos",
+    "orden": 6,
     "ejercicio": "Curl inclinado con mancuernas",
     "maquina": "Banco ajustable a 45–60° y mancuernas",
     "hevy": "Seated Incline Curl (Dumbbell)",
@@ -797,86 +806,33 @@
     "peso_min": 0
   },
   {
-    "id": "V5",
+    "id": "V1",
     "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
-    "orden": 6,
-    "ejercicio": "Curl martillo con cuerda",
-    "maquina": "Polea Hammer DAP con cuerda",
-    "hevy": "Hammer Curl (Cable)",
-    "musculo": "Bíceps",
-    "zona": "Braquial y braquiorradial: grosor del brazo visto de frente",
-    "series": 2,
-    "reps": "10–15",
-    "descanso": "60–90 s",
-    "nota": "El braquial está debajo del bíceps y lo empuja hacia fuera.",
-    "principal": [
-      "braquial",
-      "braquiorradial"
-    ],
-    "secundario": [
-      "bic_larga"
-    ],
-    "foto": "2x-universal-dap-polea-doble",
-    "calentamiento": "",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 15,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
-    "id": "V6",
-    "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
+    "bloque": "Pierna + brazos",
     "orden": 7,
-    "ejercicio": "Elevaciones laterales en máquina",
-    "maquina": "Hammer Select Lateral Raise",
-    "hevy": "Lateral Raise (Machine)",
-    "musculo": "Hombro lateral",
-    "zona": "Deltoides lateral (tercera vez en la semana)",
-    "series": 3,
-    "reps": "10–15",
-    "descanso": "60–90 s",
-    "nota": "De cara a la máquina y con el pecho siempre pegado al soporte (sin apoyo es mucho más fácil y deja de valer). Sube con los codos, sin encoger los hombros. Apunta el peso total que marca la máquina.",
-    "principal": [
-      "del_lat"
-    ],
-    "secundario": [
-      "supraesp",
-      "trap_sup"
-    ],
-    "foto": "se-full-lateral-raise",
-    "calentamiento": "1 serie de 12 reps muy ligera",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 20,
-    "incremento": 2.5,
-    "peso_min": 0
-  },
-  {
-    "id": "V7",
-    "dia": "Viernes",
-    "bloque": "Brazos + hombros + sentadilla",
-    "orden": 8,
-    "ejercicio": "Extensión de tríceps sobre la cabeza con cuerda",
-    "maquina": "Polea Hammer DAP con cuerda",
-    "hevy": "Overhead Triceps Extension (Cable)",
+    "ejercicio": "Fondos en máquina",
+    "maquina": "Hammer Seated Dip",
+    "hevy": "Seated Dip Machine",
     "musculo": "Tríceps",
-    "zona": "Cabeza larga del tríceps en estiramiento (segunda vez en la semana)",
+    "zona": "Las 3 cabezas del tríceps, con la carga más alta de la semana",
     "series": 3,
-    "reps": "12–15",
-    "descanso": "60–90 s",
-    "nota": "Igual que el lunes; al final de la sesión el peso será algo menor.",
+    "reps": "8–12",
+    "descanso": "2 min",
+    "nota": "Codos pegados al cuerpo.",
     "principal": [
-      "tri_larga"
-    ],
-    "secundario": [
       "tri_lateral",
       "tri_medial"
     ],
-    "foto": "2x-universal-dap-polea-doble",
-    "calentamiento": "",
-    "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 10,
+    "secundario": [
+      "tri_larga",
+      "pec_cost",
+      "pec_menor",
+      "del_ant"
+    ],
+    "foto": "seated-dip",
+    "calentamiento": "2 series: 10 reps con la mitad del peso y 5 reps con unos tres cuartos",
+    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
+    "peso_inicial": 20,
     "incremento": 2.5,
     "peso_min": 0
   }
