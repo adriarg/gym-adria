@@ -16,7 +16,13 @@ En las Iso-Lateral el peso de la etiqueta es por brazo.
 | Hammer Strength Iso-Lateral Row | 5,4 kg | Dorsal, trapecio, romboides, deltoides posterior | — |
 | Hammer Strength Iso-Lateral Decline Press | 2,7 kg | Pectoral inferior, tríceps | — |
 | Hammer Strength Iso-Lateral High Row | 0,9 kg | Dorsal alto, trapecio, romboides | L4, J2 |
+| Hammer Strength Iso-Lateral Super Incline Press | 5 kg | Pectoral superior y deltoides anterior | — (no es la de L3) |
+| Hammer Strength Iso-Lateral Low Row | 3,6 kg | Dorsal, trapecio, deltoides posterior | — |
+| Hammer Strength Pendulum X Squat | 36,7 kg | (la etiqueta no lo dice) cuádriceps y glúteo | M1 |
+| Hammer Strength MTS Kneeling Leg Curl | 0 (pila de placas) | Isquiotibiales ("tendones de la corva") | — |
+| Hammer Strength MTS Aplastamiento Abdominal (Abdominal Crunch) | 0 (pila de placas) | Recto del abdomen | M7 |
 
+En las de pila de placas (MTS, Select) el número que marcas es la carga: no se suma nada.
 Pendiente: Adrià mandará fotos de más máquinas.
 
 ## Pecho

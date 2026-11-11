@@ -39,5 +39,10 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Los campos lista de los JSON (`principal`, `secundario`, `mapa`) pueden llegar como texto JSON en la dashboard de Claude: léelos siempre con `mgLista()`.
 - Antes de subir, prueba la web: `node scripts/build-site.mjs` y sirve `docs/` (por ejemplo `python -m http.server --directory docs`); sin `docs/data/gym.json` la página sale vacía.
 
+## Sesiones y GitHub
+- Adrià autoriza que fusiones tú mismo tus PR (merge) cuando las pruebas pasen, sin esperarle.
+- Todo lo que se aprenda y deba durar va a GitHub (este archivo, `datos/`, `dashboard/`): cada sesión nueva debe arrancar sabiéndolo todo.
+- La sesión se compacta sola a los 300k tokens; un aviso cuenta las compactaciones. A partir de la 2ª, dile a Adrià que abra una sesión nueva.
+
 ## La dashboard dentro de Claude
 Existe también un artefacto de Claude (https://claude.ai/artifact/BfWBmdjNBDdPEwqcUs3FBW) con los mismos archivos guardados en su propio almacén. Desde una sesión en la nube puede que no se pueda actualizar: la web de GitHub es la principal. Si cambias algo en `dashboard/` y no puedes actualizar el artefacto, díselo a Adrià.
