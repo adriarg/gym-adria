@@ -353,40 +353,42 @@ function tdEj(r) {
   return td;
 }
 
-dash.draw('trans', (box) => {
-  const d = dash.data('transicion');
-  if (d.status !== 'ok') return notOk(box, d, false);
-  listo(box);
-  box.replaceChildren();
-  const rows = d.data;
-  if (!rows.length) return;
-  const W = Math.max(280, box.clientWidth || 500), H1 = 150, H2 = 110, gap = 30, H = H1 + gap + H2 + 22;
-  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H).attr('height', H);
-  const yk = d3.scaleLinear([0, d3.max(rows, (r) => r.km) || 1], [H1, 14]).nice(3);
-  const ys = d3.scaleLinear([0, Math.max(4, d3.max(rows, (r) => r.sesiones_fuerza) || 1)], [H1 + gap + H2, H1 + gap + 14]);
-  const L = 34, R = 8;
-  const x = d3.scaleBand(rows.map((r) => r.semana), [L, W - R]).padding(0.25);
-  const bw = Math.min(32, x.bandwidth()), off = (x.bandwidth() - bw) / 2;
-  for (const [sc, n] of [[yk, 3], [ys, 2]]) {
-    svg.append('g').selectAll('line').data(sc.ticks(n)).join('line').attr('x1', L).attr('x2', W - R).attr('y1', (v) => sc(v)).attr('y2', (v) => sc(v)).style('stroke', 'var(--cds-chart-grid)');
-    svg.append('g').selectAll('text').data(sc.ticks(n)).join('text').attr('class', 'mg-tick').attr('x', L - 6).attr('y', (v) => sc(v)).attr('dy', '0.35em').attr('text-anchor', 'end').text((v) => String(v));
-  }
-  svg.append('text').attr('class', 'mg-tick-strong').attr('x', L).attr('y', 4).text('km corridos');
-  svg.append('text').attr('class', 'mg-tick-strong').attr('x', L).attr('y', H1 + gap + 4).text('sesiones de fuerza');
-  const g = svg.append('g').selectAll('g').data(rows).join('g');
-  g.append('rect').attr('x', (r) => x(r.semana) + off).attr('width', bw).attr('y', (r) => yk(r.km)).attr('height', (r) => Math.max(0, H1 - yk(r.km))).attr('rx', 2).style('fill', 'var(--g-espalda)');
-  g.append('rect').attr('x', (r) => x(r.semana) + off).attr('width', bw).attr('y', (r) => ys(r.sesiones_fuerza)).attr('height', (r) => Math.max(0, H1 + gap + H2 - ys(r.sesiones_fuerza))).attr('rx', 2).style('fill', 'var(--g-pierna)');
-  const every = Math.max(1, Math.ceil(rows.length / Math.max(2, Math.floor((W - L) / 64))));
-  svg.append('g').selectAll('text').data(rows.filter((r, i) => i % every === 0)).join('text').attr('class', 'mg-tick').attr('x', (r) => x(r.semana) + x.bandwidth() / 2).attr('y', H - 4).attr('text-anchor', 'middle').text((r) => fSemana(r.semana));
-  const t = tip(box);
-  g.append('rect').attr('x', (r) => x(r.semana)).attr('width', x.step()).attr('height', H - 20).style('fill', 'transparent')
-    .on('pointermove', (ev, r) => showTip(box, t, (x(r.semana) + x.bandwidth() / 2) * box.clientWidth / W, 20, ['Semana del ' + fSemana(r.semana), fKg(r.km) + ' km corridos', r.sesiones_fuerza + ' sesiones de fuerza']))
-    .on('pointerleave', () => { t.hidden = true; });
-});
-dash.draw('marcas-tabla', (tb) => {
-  const d = dash.data('marcas_fmt');
+
+// Tabla de frecuencia: músculos (se despliegan al tocarlos) y sus partes, día a día.
+dash.draw('frec-tabla', (tb) => {
+  const d = dash.data('frecuencia');
   if (d.status !== 'ok') { tb.replaceChildren(); return; }
-  tb.replaceChildren(...d.data.map((r) => { const tr = el('tr'); tr.setAttribute('data-key', r.tipo); tr.append(el('td', null, r.prueba), el('td', 'mg-n', r.tiempo), el('td', 'mg-n', fFecha(r.fecha))); return tr; }));
+  const g = dash.params().grupo || '';
+  const abiertos = tb._abiertos || (tb._abiertos = new Set(g ? [g] : []));
+  if (g) abiertos.add(g);
+  const pinta = () => {
+    tb.replaceChildren(...d.data.filter((r) => !g || r.grupo === g).map((r) => {
+      const tr = el('tr', r.tipo === 'grupo' ? 'mg-frec-g' : 'mg-frec-p'), c = colorDe(r.grupo);
+      tr.setAttribute('data-key', r.clave);
+      if (r.tipo === 'parte' && !abiertos.has(r.grupo)) tr.hidden = true;
+      const tdN = el('td');
+      if (r.tipo === 'grupo') {
+        tdN.append(el('span', 'mg-frec-fl', abiertos.has(r.grupo) ? '▾' : '▸'), chip(r.grupo, c));
+        tr.onclick = () => { abiertos.has(r.grupo) ? abiertos.delete(r.grupo) : abiertos.add(r.grupo); pinta(); };
+      } else tdN.textContent = r.nombre;
+      tr.append(tdN);
+      for (const dia of r.dias) {
+        const x = r[dia], td = el('td', 'mg-c');
+        if (x.efectivas > 0) {
+          const b = el('span', 'mg-frec-b' + (x.directo ? '' : ' mg-frec-ind'), fKg(x.efectivas));
+          b.style.setProperty('--c', c);
+          b.title = dia + ': ' + x.ejercicios.join(', ');
+          td.append(b);
+        } else td.append(el('span', 'mg-na', '·'));
+        tr.append(td);
+      }
+      const dd = el('td', 'mg-c mg-frec-n', r.dias_directos + '×');
+      if (r.dias_directos >= 2) dd.style.color = c;
+      tr.append(dd, el('td', 'mg-c mg-frec-n2', r.dias_total + '×'));
+      return tr;
+    }));
+  };
+  pinta();
 });
 
 const GYM_DIAS = {1: 'Lunes', 2: 'Martes', 4: 'Jueves', 5: 'Viernes'};

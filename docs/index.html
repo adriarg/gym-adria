@@ -26,7 +26,6 @@
       <button class="mg-navbtn" role="tab" type="button" data-page="semana" aria-selected="false">Mi semana</button>
       <button class="mg-navbtn" role="tab" type="button" data-page="progreso" aria-selected="false">Progreso</button>
       <button class="mg-navbtn" role="tab" type="button" data-page="musculos" aria-selected="false">Músculos</button>
-      <button class="mg-navbtn" role="tab" type="button" data-page="corredor" aria-selected="false">Corredor</button>
     </nav>
   </header>
 
@@ -35,7 +34,7 @@
       <button class="mg-day" role="tab" type="button" data-dia="Lunes" aria-selected="true">Lunes<small>Torso A</small></button>
       <button class="mg-day" role="tab" type="button" data-dia="Martes" aria-selected="false">Martes<small>Pierna + core</small></button>
       <button class="mg-day" role="tab" type="button" data-dia="Jueves" aria-selected="false">Jueves<small>Torso B</small></button>
-      <button class="mg-day" role="tab" type="button" data-dia="Viernes" aria-selected="false">Viernes<small>Brazos + hombros</small></button>
+      <button class="mg-day" role="tab" type="button" data-dia="Viernes" aria-selected="false">Viernes<small>Brazos + hombros + sentadilla</small></button>
     </div>
     <p class="mg-banner" id="banner-bloque" data-draw="bloque">—</p>
     <div class="mg-card mg-warm" id="calentamiento-general">
@@ -126,6 +125,16 @@
       </div>
       <ul class="mg-estados" id="cobertura-estados" data-draw="cob-estados" data-source="cobertura_estado"></ul>
     </div>
+    <div class="mg-card" id="card-frecuencia">
+      <h3 class="mg-card-title">Cuántas veces tocas cada músculo en tu rutina</h3>
+      <p class="mg-note">Series efectivas de tu plan cada día (directas + la mitad de las indirectas). <b>Color fuerte</b>: ese día hay un ejercicio directo para él; <b>color suave</b>: solo le llega de rebote. Toca un músculo para ver sus partes.</p>
+      <div class="mg-tablebox">
+        <table class="mg-table mg-frec">
+          <thead><tr><th>Músculo / parte</th><th class="mg-c">Lun</th><th class="mg-c">Mar</th><th class="mg-c">Jue</th><th class="mg-c">Vie</th><th class="mg-c">Días directos</th><th class="mg-c">Días en total</th></tr></thead>
+          <tbody data-draw="frec-tabla" data-source="frecuencia"></tbody>
+        </table>
+      </div>
+    </div>
     <div class="mg-card" id="card-cobertura">
       <h3 class="mg-card-title">Todas las partes, una a una</h3>
       <p class="mg-note">Barra: series efectivas del plan por semana; raya: el objetivo para tu prioridad.</p>
@@ -144,23 +153,6 @@
     </div>
   </section>
 
-  <section class="mg-page" id="corredor" data-pagepanel="corredor" hidden>
-    <h2 class="mg-h2">De corredor a gimnasio</h2>
-    <div class="mg-grid">
-      <div class="mg-card" id="card-transicion">
-        <h3 class="mg-card-title">Km corridos y sesiones de fuerza por semana</h3>
-        <p class="mg-note">Desde agosto, con datos de Strava.</p>
-        <div class="mg-chart" style="min-height: 300px" id="chart-transicion" data-draw="trans" data-source="transicion"></div>
-      </div>
-      <div class="mg-card" id="card-marcas">
-        <h3 class="mg-card-title">Tus marcas corriendo</h3>
-        <table class="mg-table" data-source="marcas_fmt" data-row-key="tipo">
-          <thead><tr><th data-field="prueba">Distancia</th><th data-field="tiempo" class="mg-n">Tiempo</th><th data-field="fecha" class="mg-n">Fecha</th></tr></thead>
-          <tbody data-draw="marcas-tabla"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
   <details id="metodo">
     <summary>Cómo se calcula cada número</summary>

@@ -2,7 +2,7 @@
    funcionen igual en una web estática. Los datos salen de data/*.json, que GitHub Actions
    actualiza desde Strava. */
 (function () {
-  const ARCHIVOS = {gym: 'gym.json', carreras: 'carreras.json', marcas: 'marcas.json', rutina: 'rutina.json', partes: 'partes.json', musculos: 'musculos.json', cambios: 'cambios.json'};
+  const ARCHIVOS = {gym: 'gym.json', rutina: 'rutina.json', partes: 'partes.json', musculos: 'musculos.json', cambios: 'cambios.json'};
   const loaders = {}, calcs = {}, draws = {}, onDataFns = [], raw = {};
   let cache = {}, params = {}, listo = false, meta = null;
 
