@@ -20,6 +20,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
+- En Hevy/Strava Adrià apunta solo los discos, sin el peso propio de la máquina. La tabla "Peso propio de las máquinas" de `datos/equipamiento-mast.md` da ese peso: súmalo para saber la carga real y, al recomendar un peso, dile cuántos discos poner (total − máquina). Usa los nombres exactos de las etiquetas. Cuando mande fotos de otras máquinas, añádelas a esa tabla.
 - No tiene Hevy Pro, así que no hay API de Hevy: las rutinas en Hevy las cambia él a mano. Cuando cambies un ejercicio, recuérdale qué tocar en Hevy (el nombre exacto está en el campo `hevy`).
 
 ## Cómo funciona la web pública
@@ -37,6 +38,11 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Las marcas corriendo son fijas en `docs/data/marcas.json` (Strava no da los récords absolutos por la API).
 - Los campos lista de los JSON (`principal`, `secundario`, `mapa`) pueden llegar como texto JSON en la dashboard de Claude: léelos siempre con `mgLista()`.
 - Antes de subir, prueba la web: `node scripts/build-site.mjs` y sirve `docs/` (por ejemplo `python -m http.server --directory docs`); sin `docs/data/gym.json` la página sale vacía.
+
+## Sesiones y GitHub
+- Adrià autoriza que fusiones tú mismo tus PR (merge) cuando las pruebas pasen, sin esperarle.
+- Todo lo que se aprenda y deba durar va a GitHub (este archivo, `datos/`, `dashboard/`): cada sesión nueva debe arrancar sabiéndolo todo.
+- La sesión se compacta sola a los 300k tokens; un aviso cuenta las compactaciones. A partir de la 2ª, dile a Adrià que abra una sesión nueva.
 
 ## La dashboard dentro de Claude
 Existe también un artefacto de Claude (https://claude.ai/artifact/BfWBmdjNBDdPEwqcUs3FBW) con los mismos archivos guardados en su propio almacén. Desde una sesión en la nube puede que no se pueda actualizar: la web de GitHub es la principal. Si cambias algo en `dashboard/` y no puedes actualizar el artefacto, díselo a Adrià.
