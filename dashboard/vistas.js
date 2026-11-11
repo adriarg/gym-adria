@@ -335,10 +335,23 @@ dash.draw('cob-tabla', (tb) => {
     const tdSem = el('td', 'mg-n');
     tdSem.append(s ? mark('span', 'cobertura_real', 'clave=' + enc(s.clave), 'efectivas', fKg(s.efectivas)) : el('span', 'mg-na', '0'));
     tr.append(tdMap, tdParte, el('td', null, r.prioridad), el('td', 'mg-n', String(r.directas)), el('td', 'mg-n', String(r.indirectas)), ef, tdSem, el('td', 'mg-n', String(r.dias)),
-      el('td', ESTADO_CLASE[r.estado], r.estado), el('td', 'mg-why mg-hide-narrow', r.porque), el('td', 'mg-why mg-hide-narrow', r.ejercicios || '—'));
+      el('td', ESTADO_CLASE[r.estado], r.estado), el('td', 'mg-why mg-hide-narrow', r.porque), tdEj(r));
     return tr;
   }));
 });
+
+// Ejercicios de MI rutina que trabajan esta parte: día, nombre y series (las indirectas en gris).
+function tdEj(r) {
+  const td = el('td', 'mg-why mg-ejdia mg-hide-narrow');
+  const l = r.ej_lista || [];
+  if (!l.length) { td.textContent = '—'; return td; }
+  for (const x of l) {
+    const fila = el('div', x.directa ? null : 'mg-ind');
+    fila.append(el('b', 'mg-dia', x.dia.slice(0, 3)), document.createTextNode(' ' + x.ejercicio + ' '), el('span', 'mg-ser', x.series + ' series' + (x.directa ? '' : ' (cuentan ½)')));
+    td.append(fila);
+  }
+  return td;
+}
 
 dash.draw('trans', (box) => {
   const d = dash.data('transicion');

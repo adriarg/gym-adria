@@ -84,3 +84,8 @@
 [data-dash-source-state=empty] { color: transparent; }
 [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
 @media (max-width: 560px) { .mg-hide-narrow { display: none; } .mg details dl { grid-template-columns: 1fr; } .mg-dl { grid-template-columns: 5.5rem 1fr; } }
+
+.mg-cob td.mg-ejdia { color: var(--color-fg); line-height: 1.5; min-width: 17rem; }
+.mg-cob td.mg-ejdia .mg-dia { display: inline-block; min-width: 2.4em; color: var(--color-accent, #4ade80); }
+.mg-cob td.mg-ejdia .mg-ser { color: var(--color-fg-muted); font-size: .85em; }
+.mg-cob td.mg-ejdia .mg-ind { color: var(--color-fg-muted); font-size: .9em; }
