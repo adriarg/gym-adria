@@ -22,6 +22,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Regla de descanso de Adrià (2026-11-12): lo que se trabaja el jueves NO se repite el viernes (son días seguidos). Lo del lunes puede repetirse jueves o viernes, y lo del viernes cualquier otro día. Objetivo: llegar a las series objetivo de cada parte, sin pasarse mucho ni quedarse corto, con descansos suficientes.
 - En la web y al darle la rutina: usa siempre el nombre exacto de la máquina en Mast (campo `maquina`, en mayúsculas y con la marca entre paréntesis, p. ej. SUPER PULLOVER (PANATTA)) para que la encuentre rápido; la foto de la máquina va grande en cada ficha. En la nota de Hevy pone «MÁQUINA — MÚSCULO». Faltan fotos de Linear Leg Press y Glute Drive.
 - Molestia (2026-11-09 y 2026-11-12): dolor lumbar en el peso muerto rumano («técnica mejorable»). Con rumano el martes y peso muerto el viernes: poco peso, 2–3 reps en reserva y vigilarlo.
+- Calentamiento (2026-11-12): como máximo 1 serie de aproximación por ejercicio, nunca 2.
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
