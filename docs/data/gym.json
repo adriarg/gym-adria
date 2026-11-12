@@ -1,6 +1,17 @@
 {
  "activities": [
   {
+   "id": 20964933018,
+   "name": "3. Upper B",
+   "sport_type": "WeightTraining",
+   "start_local": "2026-11-12T18:33:56",
+   "description": "Logged with hevyapp.com\n\nIncline Chest Press (Machine)\n\"lo tuve q hacer el ultimo de la sesion, referencia antigua mal si es q habia porque es mi 1a vez en esta maquina\n\npeso es suma de ambos, siempre\n\nbajo la ultima para llegar al rango\"\nSet 1: 20 kg x 10 [Warm-up]\nSet 2: 30 kg x 8 \nSet 3: 30 kg x 6 \nSet 4: 25 kg x 6 \n\nIso-Lateral High Row (Machine)\n\"a partir de ahora peso sumado\"\nSet 1: 60 kg x 10 [Warm-up]\nSet 2: 60 kg x 13 \nSet 3: 60 kg x 10 \nSet 4: 60 kg x 9 \n\nSingle Arm Lateral Raise (Cable)\n\"orden izquierda derecha, parece que son mas de los kg q pone\n\ncuento solo si llego a 90 grados? sino ultimas 2 serie meh\"\nSet 1: 2 kg x 12 [Warm-up]\nSet 2: 2 kg x 12 [Warm-up]\nSet 3: 4 kg x 12 \nSet 4: 4 kg x 12 \nSet 5: 2 kg x 16 \nSet 6: 2 kg x 20 \nSet 7: 2 kg x 15 \nSet 8: 2 kg x 14 \nSet 9: 2 kg x 18 \nSet 10: 2 kg x 18 \nSet 11: 2 kg x 13 [Failure]\nSet 12: 2 kg x 14 [Failure]\n\nPullover (Machine)\nSet 1: 40 kg x 12 \nSet 2: 40 kg x 11 \nSet 3: 40 kg x 9 [Failure]\n\nPeck Fly (Máquina)\nSet 1: 43 kg x 18 \nSet 2: 48.5 kg x 13 \nSet 3: 48.5 kg x 17 [Failure]\n\nRear Delt Reverse Fly (Machine)\nSet 1: 12 kg x 12 [Warm-up]\nSet 2: 26 kg x 15 \nSet 3: 33 kg x 9 \nSet 4: 28.5 kg x 13 \n\nCrunch (Machine)\n\"mucha fatiga, muy duro, ultima serie no se si bajar a 10 y hacer mas series o mantener 15\"\nSet 1: 20 kg x 9 \nSet 2: 15 kg x 8 \nSet 3: 10 kg x 10 \n",
+   "summary": {
+    "moving_time": 5823,
+    "distance": 0
+   }
+  },
+  {
    "id": 20938356045,
    "name": "2. Pierna + Core",
    "sport_type": "WeightTraining",
