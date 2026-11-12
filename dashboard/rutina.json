@@ -141,7 +141,7 @@
     "hevy": "Lateral Raise (Machine)",
     "musculo": "Hombro lateral",
     "zona": "Deltoides lateral: anchura de hombros",
-    "series": 3,
+    "series": 4,
     "reps": "10–15",
     "descanso": "90 s",
     "nota": "De cara a la máquina y con el pecho siempre pegado al soporte (sin apoyo es mucho más fácil y deja de valer). Sube con los codos, sin encoger los hombros. Apunta el peso total que marca la máquina.",
@@ -197,7 +197,7 @@
     "hevy": "Overhead Triceps Extension (Cable)",
     "musculo": "Tríceps",
     "zona": "Cabeza larga del tríceps, la más grande, en estiramiento",
-    "series": 3,
+    "series": 4,
     "reps": "10–15",
     "descanso": "90 s",
     "nota": "De espaldas a la polea, codos junto a la cabeza.",
@@ -343,7 +343,7 @@
     "series": 2,
     "reps": "8–10",
     "descanso": "2–3 min",
-    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie.",
+    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
     "principal": [
       "isq_largos",
       "glut_max"
@@ -358,7 +358,7 @@
     "esfuerzo": "Deja 2–3 reps en reserva: va quinto, con las piernas ya cansadas; aquí manda la técnica.",
     "peso_inicial": 20,
     "incremento": 2.5,
-    "peso_min": 20
+    "peso_min": 0
   },
   {
     "id": "M7",
@@ -490,7 +490,7 @@
     "hevy": "Single Arm Lateral Raise (Cable)",
     "musculo": "Hombro lateral",
     "zona": "Deltoides lateral: anchura de hombros, con tensión también abajo",
-    "series": 4,
+    "series": 5,
     "reps": "12–20",
     "descanso": "60–90 s (entre brazos, nada)",
     "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila.",
@@ -637,7 +637,7 @@
     "series": 3,
     "reps": "8–10",
     "descanso": "2–3 min",
-    "nota": "Primero, técnica. Barra apoyada en la parte alta de la espalda (no en el cuello), pies a la anchura de los hombros con las puntas un poco abiertas. Coge aire, aprieta el abdomen como si te fueran a dar un golpe y baja con las rodillas siguiendo la línea de los pies, hasta que el muslo quede al menos paralelo al suelo. Sube empujando el suelo sin soltar el aire hasta arriba. Pon los topes de seguridad del rack un poco por debajo de tu bajada. Grábate de lado la primera serie y enséñaselo a tu entrenadora.",
+    "nota": "Primero, técnica. Barra apoyada en la parte alta de la espalda (no en el cuello), pies a la anchura de los hombros con las puntas un poco abiertas. Coge aire, aprieta el abdomen como si te fueran a dar un golpe y baja con las rodillas siguiendo la línea de los pies, hasta que el muslo quede al menos paralelo al suelo. Sube empujando el suelo sin soltar el aire hasta arriba. Pon los topes de seguridad del rack un poco por debajo de tu bajada. Grábate de lado la primera serie y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
     "principal": [
       "vastos",
       "glut_max"
@@ -651,9 +651,9 @@
     "foto": "barras-olimpicas-discos-uretano",
     "calentamiento": "2 series: 10 reps con la barra vacía, despacio, y 5 reps con unos tres cuartos del peso",
     "esfuerzo": "Deja 2–3 reps en reserva en todas las series: aquí manda la técnica, no el peso.",
-    "peso_inicial": 20,
+    "peso_inicial": 10,
     "incremento": 2.5,
-    "peso_min": 20
+    "peso_min": 0
   },
   {
     "id": "V2",
@@ -697,7 +697,7 @@
     "series": 3,
     "reps": "5–8",
     "descanso": "2–3 min",
-    "nota": "Barra encima de la mitad del pie, pies a la anchura de las caderas. Agarra la barra justo por fuera de las piernas, pecho arriba y espalda recta. Coge aire, aprieta el abdomen y empuja el suelo con las piernas, con la barra rozando las piernas todo el rato. Arriba, cadera estirada sin echarte atrás. Baja con el mismo control. Si la espalda se redondea, baja peso. Grábate de lado y enséñaselo a tu entrenadora.",
+    "nota": "Barra encima de la mitad del pie, pies a la anchura de las caderas. Agarra la barra justo por fuera de las piernas, pecho arriba y espalda recta. Coge aire, aprieta el abdomen y empuja el suelo con las piernas, con la barra rozando las piernas todo el rato. Arriba, cadera estirada sin echarte atrás. Baja con el mismo control. Si la espalda se redondea, baja peso. Grábate de lado y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
     "principal": [
       "glut_max",
       "isq_largos",
@@ -713,35 +713,35 @@
     "foto": "barras-olimpicas-discos-uretano",
     "calentamiento": "2 series: 8 reps con la barra y discos de 5 kg y 5 reps con unos tres cuartos del peso",
     "esfuerzo": "Deja 2–3 reps en reserva en todas las series: aquí manda la técnica, no el peso.",
-    "peso_inicial": 40,
+    "peso_inicial": 20,
     "incremento": 5,
-    "peso_min": 20
+    "peso_min": 0
   },
   {
-    "id": "V3",
+    "id": "V11",
     "dia": "Viernes",
     "bloque": "Pierna + brazos",
     "orden": 4,
-    "ejercicio": "Tríceps en máquina de 3 ángulos",
-    "maquina": "Panatta Three Angles Triceps",
-    "hevy": "Three Angle Triceps",
+    "ejercicio": "Extensión de tríceps sobre la cabeza",
+    "maquina": "Polea Hammer DAP con cuerda",
+    "hevy": "Overhead Triceps Extension (Cable)",
     "musculo": "Tríceps",
-    "zona": "Cabezas lateral y medial: la herradura del brazo",
+    "zona": "Cabeza larga del tríceps, la más grande, en estiramiento",
     "series": 3,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "Mismo peso en las 3 series (la última vez fuiste de 20 a 30 kg).",
+    "nota": "De espaldas a la polea, codos junto a la cabeza.",
     "principal": [
+      "tri_larga"
+    ],
+    "secundario": [
       "tri_lateral",
       "tri_medial"
     ],
-    "secundario": [
-      "tri_larga"
-    ],
-    "foto": "three-angles-triceps-machine",
-    "calentamiento": "",
+    "foto": "2x-universal-dap-polea-doble",
+    "calentamiento": "1 serie de 12 reps muy ligera",
     "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 27.5,
+    "peso_inicial": 12.5,
     "incremento": 2.5,
     "peso_min": 0
   },
