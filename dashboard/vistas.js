@@ -182,10 +182,15 @@ dash.draw('rutina-dia', (ul) => {
     badge.style.background = c;
     const chipM = chip(r.musculo, c);
     chipM.setAttribute('data-source', 'rutina'); chipM.setAttribute('data-where', w); chipM.setAttribute('data-field', 'musculo');
-    top.append(badge, mark('h4', 'rutina', w, 'ejercicio', r.ejercicio, 'mg-ex-name'), chipM);
-    const media = el('div', 'mg-media');
+    // El título es el nombre exacto de la máquina en Mast, para encontrarla rápido; el ejercicio va debajo.
+    const tit = el('div', 'mg-ex-tit');
+    tit.append(mark('h4', 'rutina', w, 'maquina', r.maquina, 'mg-ex-name'), mark('span', 'rutina', w, 'ejercicio', r.ejercicio, 'mg-ex-sub'));
+    top.append(badge, tit, chipM);
     const foto = window.MG_FOTOS && window.MG_FOTOS[r.foto];
-    if (foto) { const im = el('img', 'mg-photo'); im.src = foto; im.alt = r.maquina; media.append(im); }
+    let fotoBox = null;
+    if (foto) { fotoBox = el('div', 'mg-fotobig'); const im = el('img'); im.src = foto; im.alt = r.maquina; im.loading = 'lazy'; fotoBox.append(im); }
+    else { fotoBox = el('div', 'mg-fotobig mg-fotonone', 'Sin foto todavía: mándasela a Claude'); }
+    const media = el('div', 'mg-media');
     const prim = new Set(), sec = new Set();
     mgLista(r.principal).forEach((id) => (mapa[id] || []).forEach((k) => prim.add(k)));
     mgLista(r.secundario).forEach((id) => (mapa[id] || []).forEach((k) => { if (!prim.has(k)) sec.add(k); }));
@@ -210,9 +215,8 @@ dash.draw('rutina-dia', (ul) => {
     fila('Esfuerzo', mark('span', 'rutina', w, 'esfuerzo', r.esfuerzo));
     fila('Técnica', mark('span', 'rutina', w, 'nota', r.nota));
     fila('Trabaja', mark('span', 'rutina', w, 'zona', r.zona));
-    fila('Máquina', mark('span', 'rutina', w, 'maquina', r.maquina));
     fila('En Hevy', mark('span', 'rutina', w, 'hevy', r.hevy, 'mg-code'));
-    li.append(top, media, dl);
+    li.append(top, fotoBox, media, dl);
     return li;
   }));
 });
