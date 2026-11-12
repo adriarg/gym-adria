@@ -101,3 +101,10 @@
 .mg-frec-b.mg-frec-ind { background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--color-fg); font-weight: 500; }
 .mg-frec-n { font-size: 1.05em; font-weight: 800; }
 .mg-frec-n2 { color: var(--color-fg-muted); }
+
+.mg-ex-tit { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mg-ex-tit .mg-ex-name { letter-spacing: .01em; line-height: 1.2; }
+.mg-ex-sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.mg-fotobig { width: 100%; aspect-ratio: 4 / 3; max-height: 22rem; border-radius: var(--cds-radius); background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.mg-fotobig img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.mg-fotonone { background: color-mix(in srgb, var(--color-fg) 6%, transparent); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); aspect-ratio: auto; min-height: 5rem; }
