@@ -481,34 +481,30 @@
     "peso_min": 0
   },
   {
-    "id": "J3",
+    "id": "J8",
     "dia": "Jueves",
     "bloque": "Torso B",
     "orden": 3,
-    "ejercicio": "Press de hombro iso-lateral",
-    "maquina": "Hammer Iso-Lateral Shoulder Press",
-    "hevy": "Shoulder Press (Machine Plates)",
-    "musculo": "Hombro anterior",
-    "zona": "Deltoides anterior y lateral, con tríceps",
-    "series": 3,
-    "reps": "8–12",
-    "descanso": "2 min",
-    "nota": "No bloquees los codos arriba.",
+    "ejercicio": "Elevación lateral en polea baja, a un brazo",
+    "maquina": "Hammer HD Universal DAP (polea doble, altura ajustable)",
+    "hevy": "Single Arm Lateral Raise (Cable)",
+    "musculo": "Hombro lateral",
+    "zona": "Deltoides lateral: anchura de hombros, con tensión también abajo",
+    "series": 4,
+    "reps": "12–20",
+    "descanso": "60–90 s (entre brazos, nada)",
+    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila.",
     "principal": [
-      "del_ant"
+      "del_lat"
     ],
     "secundario": [
-      "del_lat",
-      "tri_lateral",
-      "tri_medial",
-      "trap_sup",
-      "serrato",
-      "pec_clav"
+      "supraesp",
+      "trap_sup"
     ],
-    "foto": "iso-lateral-shoulder-press",
-    "calentamiento": "1 serie de 8 reps con la mitad del peso",
-    "esfuerzo": "Deja 1–2 reps en reserva en todas las series.",
-    "peso_inicial": 10,
+    "foto": "2x-universal-dap-polea-doble",
+    "calentamiento": "1 serie de 12 reps muy ligera por brazo",
+    "esfuerzo": "Series 1 a 3: deja 1–2 reps en reserva. Última serie: al fallo.",
+    "peso_inicial": 5,
     "incremento": 2.5,
     "peso_min": 0
   },

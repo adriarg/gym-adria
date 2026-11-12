@@ -16,9 +16,9 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 ## La rutina
 - Bloque 1: 2026-11-09 → 2026-12-20; semana de descarga la del 2026-12-21. Al acabar, revisar series por músculo y progresión y preparar el bloque 2.
 - Su entrenadora (2026-11-10) quiere que aprenda bien los ejercicios básicos con barra libre (peso muerto, peso muerto rumano, sentadilla, zancadas): sirven en cualquier gimnasio y enseñan a apretar el tronco. El rumano (martes), la sentadilla con barra y el peso muerto convencional (viernes, desde el 2026-11-11, en el Half Rack) ya están en el bloque 1; en el bloque 2 entran las zancadas, con poco peso y técnica primero.
-- L Torso A · M Pierna · J Torso B · V Pierna + brazos. 28 ejercicios, 79 series/semana. Martes y viernes los eligió Adrià ejercicio a ejercicio y en ese orden (2026-11-11): respeta el orden.
+- L Torso A · M Pierna · J Torso B · V Pierna + brazos. 28 ejercicios, 80 series/semana. Martes y viernes los eligió Adrià ejercicio a ejercicio y en ese orden (2026-11-11): respeta el orden.
 - Lo que quiere Adrià (2026-11-11): lunes y jueves torso mezclando empuje y tirón, martes pierna; esos 3 son los días fuertes. El viernes es pierna con barra libre (sentadilla, peso muerto, hip thrust) alternada con brazos.
-- Favoritos de Adrià (2026-11-12) para lo que le falta: extensión de tríceps sobre la cabeza con cuerda en polea (cabeza larga) y elevación lateral en polea baja a un brazo (hombro lateral). Aún no decidido dónde meterlos: no los añadas sin que lo confirme.
+- Favoritos de Adrià (2026-11-12) para lo que le falta: extensión de tríceps sobre la cabeza con cuerda en polea (cabeza larga) y elevación lateral en polea baja a un brazo (hombro lateral). La elevación lateral en polea ya está el jueves (sustituye al press de hombro, 2026-11-12); la extensión con cuerda está el lunes. No añadas más sin que lo confirme.
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
