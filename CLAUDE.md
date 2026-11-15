@@ -27,6 +27,8 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
 - En Hevy/Strava Adrià apunta solo los discos, sin el peso propio de la máquina. La tabla "Peso propio de las máquinas" de `datos/equipamiento-mast.md` da ese peso: súmalo para saber la carga real y, al recomendar un peso, dile cuántos discos poner (total − máquina). Usa los nombres exactos de las etiquetas. Cuando mande fotos de otras máquinas, añádelas a esa tabla.
+- Desde el 2026-11-13, en el curl MTS (V2), el curl inclinado con mancuernas (V4) y los fondos SEATED DIP (V1) Adrià apunta en Hevy la SUMA de los dos brazos o pilas. Para comparar con la rutina (por brazo), divide entre 2.
+- 2026-11-13: en la sentadilla con barra le duele el apoyo de la barra en la espalda. En los fondos usa cinturón y el asiento al 12.
 - No tiene Hevy Pro, así que no hay API de Hevy: las rutinas en Hevy las cambia él a mano. Cuando cambies un ejercicio, recuérdale qué tocar en Hevy (el nombre exacto está en el campo `hevy`).
 
 ## Cómo funciona la web pública
