@@ -32,6 +32,8 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - 2026-11-13: en la sentadilla con barra le duele el apoyo de la barra en la espalda. En los fondos usa cinturón y el asiento al 12.
 - No tiene Hevy Pro, así que no hay API de Hevy: las rutinas en Hevy las cambia él a mano. Cuando cambies un ejercicio, recuérdale qué tocar en Hevy (el nombre exacto está en el campo `hevy`).
 
+- Rutinas públicas de Hevy (enlaces hevy.com/routine/ID): la página no trae los datos; se leen con `curl -H "x-api-key: shelobs_hevy_web" https://api.hevyapp.com/routine_with_short_id/ID` (clave pública de la web de Hevy). El entorno tiene hevy.com permitido desde el 2026-11-16.
+
 ## Cómo funciona la web pública
 - URL: https://adriarg.github.io/gym-adria/ (GitHub Pages, sin login). Repo público `adriarg/gym-adria`: no subas nada privado.
 - Datos: Hevy sube cada entreno a Strava con las series en la descripción ("Set N: X kg x R [Warm-up]/[Failure]"). `.github/workflows/sync.yml` corre cada ~5 min (relevándose a sí mismo, ver más abajo) y:
