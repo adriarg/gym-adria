@@ -1,6 +1,17 @@
 {
  "activities": [
   {
+   "id": 21025544137,
+   "name": "2. Lower",
+   "sport_type": "WeightTraining",
+   "start_local": "2026-11-17T18:32:27",
+   "description": "Logged with hevyapp.com\n\nBulgarian Split Squat (Dumbbell)\n\"una serie por pierna apunto\n\n30s descanso entre piernas\"\nSet 1: 0 kg x 8 \nSet 2: 0 kg x 8 \nSet 3: 20 kg x 12 \nSet 4: 20 kg x 12 \nSet 5: 20 kg x 12 \nSet 6: 20 kg x 12 \nSet 7: 20 kg x 12 \nSet 8: 20 kg x 12 \n\nLeg Press (Machine)\nSet 1: 60 kg x 10 [Warm-up]\nSet 2: 110 kg x 12 \nSet 3: 110 kg x 15 \nSet 4: 110 kg x 13 \n\nSeated Leg Curl (Machine)\n\"pies mirando hacia a mi/arriba, tensos, con eso a partir de la 3a serie mucho mejor\"\nSet 1: 25 kg x 12 [Warm-up]\nSet 2: 49.5 kg x 10 \nSet 3: 54 kg x 12 \nSet 4: 61 kg x 12 [Failure]\n\nPendulum Squat (Machine)\nSet 1: 20 kg x 8 [Warm-up]\nSet 2: 30 kg x 14 \nSet 3: 40 kg x 9 \nSet 4: 40 kg x 12 \n\nRomanian Deadlift (Barbell)\n\"0kgs hasta aprender bien la tecnica\"\nSet 1: 0 kg x 10 [Warm-up]\nSet 2: 0 kg x 8 \nSet 3: 0 kg x 8 \n\nCrunch (Machine)\n\"me parece q parte se la carga la llevo a piernas cuando muero\"\nSet 1: 15 kg x 16 \nSet 2: 20 kg x 9 \nSet 3: 20 kg x 7 [Failure]\n\nLeg Extension (Machine)\n\"⚠️PARANDO 1s arriba\"\nSet 1: 65 kg x 13 \nSet 2: 65 kg x 10 [Failure]\n",
+   "summary": {
+    "moving_time": 7100,
+    "distance": 0
+   }
+  },
+  {
    "id": 21012365960,
    "name": "1. Upper A",
    "sport_type": "WeightTraining",
