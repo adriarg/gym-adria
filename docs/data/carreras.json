@@ -1,7 +1,7 @@
 {
  "activities": [
   {
-   "id": 20952935378,
+   "id": "20952935378",
    "name": "cardio facilito",
    "sport_type": "Run",
    "start_local": "2026-11-11T22:12:44",
@@ -11,7 +11,7 @@
    }
   },
   {
-   "id": 20771536821,
+   "id": "20771536821",
    "name": "Carrera nocturna",
    "sport_type": "Run",
    "start_local": "2026-10-28T22:28:10",
@@ -21,7 +21,7 @@
    }
   },
   {
-   "id": 20652706679,
+   "id": "20652706679",
    "name": "dia 51🌧️",
    "sport_type": "Run",
    "start_local": "2026-10-19T22:14:45",
@@ -31,7 +31,7 @@
    }
   },
   {
-   "id": 20633629233,
+   "id": "20633629233",
    "name": "Cursa de Cornellà | 37:58",
    "sport_type": "Run",
    "start_local": "2026-10-18T09:15:11",
@@ -41,7 +41,7 @@
    }
   },
   {
-   "id": 20633629476,
+   "id": "20633629476",
    "name": "Carrera de mañana",
    "sport_type": "Run",
    "start_local": "2026-10-18T09:00:00",
@@ -51,7 +51,7 @@
    }
   },
   {
-   "id": 20620328444,
+   "id": "20620328444",
    "name": "Carrera de tarde",
    "sport_type": "Run",
    "start_local": "2026-10-17T13:23:25",
@@ -61,7 +61,7 @@
    }
   },
   {
-   "id": 20601218781,
+   "id": "20601218781",
    "name": "bla bla run nocturno explosivo",
    "sport_type": "Run",
    "start_local": "2026-10-15T22:13:54",
@@ -71,7 +71,7 @@
    }
   },
   {
-   "id": 20585856436,
+   "id": "20585856436",
    "name": "7km @4:06",
    "sport_type": "Run",
    "start_local": "2026-10-14T19:15:02",
@@ -81,7 +81,7 @@
    }
   },
   {
-   "id": 20557976086,
+   "id": "20557976086",
    "name": "hoy solo",
    "sport_type": "Run",
    "start_local": "2026-10-12T19:11:04",
@@ -91,7 +91,7 @@
    }
   },
   {
-   "id": 20521998322,
+   "id": "20521998322",
    "name": "Night Run",
    "sport_type": "Run",
    "start_local": "2026-10-10T03:22:19",
@@ -101,7 +101,7 @@
    }
   },
   {
-   "id": 20507469586,
+   "id": "20507469586",
    "name": "Carrera nocturna",
    "sport_type": "Run",
    "start_local": "2026-10-08T21:28:10",
@@ -111,7 +111,7 @@
    }
   },
   {
-   "id": 20493218349,
+   "id": "20493218349",
    "name": "10x1000 @3:45 R 1'30",
    "sport_type": "Run",
    "start_local": "2026-10-07T19:27:05",
@@ -121,7 +121,7 @@
    }
   },
   {
-   "id": 20466069145,
+   "id": "20466069145",
    "name": "Night Run",
    "sport_type": "Run",
    "start_local": "2026-10-05T22:27:19",
@@ -131,7 +131,7 @@
    }
   },
   {
-   "id": 20446976564,
+   "id": "20446976564",
    "name": "Seguimos",
    "sport_type": "Run",
    "start_local": "2026-10-04T13:03:12",
@@ -141,7 +141,7 @@
    }
   },
   {
-   "id": 20397335912,
+   "id": "20397335912",
    "name": "8x1000 @3:47 R1'30",
    "sport_type": "Run",
    "start_local": "2026-09-30T19:25:01",
@@ -151,7 +151,7 @@
    }
   },
   {
-   "id": 20384672055,
+   "id": "20384672055",
    "name": "night ruunn",
    "sport_type": "Run",
    "start_local": "2026-09-29T22:32:12",
@@ -161,7 +161,7 @@
    }
   },
   {
-   "id": 20355960437,
+   "id": "20355960437",
    "name": "Series de celebració🥂🎂",
    "sport_type": "Run",
    "start_local": "2026-09-27T17:58:38",
@@ -171,7 +171,7 @@
    }
   },
   {
-   "id": 20328894588,
+   "id": "20328894588",
    "name": "Night Run con el que nunca falla",
    "sport_type": "Run",
    "start_local": "2026-09-25T22:12:37",
@@ -181,7 +181,7 @@
    }
   },
   {
-   "id": 20300758573,
+   "id": "20300758573",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-09-23T19:19:54",
@@ -191,7 +191,7 @@
    }
   },
   {
-   "id": 20269923789,
+   "id": "20269923789",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-09-21T18:01:13",
@@ -201,7 +201,7 @@
    }
   },
   {
-   "id": 20250445084,
+   "id": "20250445084",
    "name": "Cursa de la Mercè 2026",
    "sport_type": "Run",
    "start_local": "2026-09-20T08:31:23",
@@ -211,7 +211,7 @@
    }
   },
   {
-   "id": 20250444673,
+   "id": "20250444673",
    "name": "Carrera de mañana",
    "sport_type": "Run",
    "start_local": "2026-09-20T08:04:26",
@@ -221,7 +221,7 @@
    }
   },
   {
-   "id": 20239650509,
+   "id": "20239650509",
    "name": "Activació Express",
    "sport_type": "Run",
    "start_local": "2026-09-19T13:42:28",
@@ -231,7 +231,7 @@
    }
   },
   {
-   "id": 20202543187,
+   "id": "20202543187",
    "name": "6km @4:02",
    "sport_type": "Run",
    "start_local": "2026-09-16T17:59:15",
@@ -241,7 +241,7 @@
    }
   },
   {
-   "id": 20176613768,
+   "id": "20176613768",
    "name": "Carrera nocturna",
    "sport_type": "Run",
    "start_local": "2026-09-14T22:27:37",
@@ -251,7 +251,7 @@
    }
   },
   {
-   "id": 20157355123,
+   "id": "20157355123",
    "name": "50km ✅",
    "sport_type": "Run",
    "start_local": "2026-09-13T13:01:39",
@@ -261,7 +261,7 @@
    }
   },
   {
-   "id": 20128965814,
+   "id": "20128965814",
    "name": "Carrera a la hora del almuerzo",
    "sport_type": "Run",
    "start_local": "2026-09-11T12:16:35",
@@ -271,7 +271,7 @@
    }
   },
   {
-   "id": 20108526333,
+   "id": "20108526333",
    "name": "8x1000 @3:49 R 1'30",
    "sport_type": "Run",
    "start_local": "2026-09-09T21:42:05",
@@ -281,7 +281,7 @@
    }
   },
   {
-   "id": 20078941117,
+   "id": "20078941117",
    "name": "Evening Run",
    "sport_type": "Run",
    "start_local": "2026-09-07T20:04:02",
@@ -291,7 +291,7 @@
    }
   },
   {
-   "id": 20065278326,
+   "id": "20065278326",
    "name": "Evening Run",
    "sport_type": "Run",
    "start_local": "2026-09-06T18:24:30",
@@ -301,7 +301,7 @@
    }
   },
   {
-   "id": 20036580742,
+   "id": "20036580742",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-09-04T18:48:57",
@@ -311,7 +311,7 @@
    }
   },
   {
-   "id": 20010014240,
+   "id": "20010014240",
    "name": "4x2000 @4:05 R 2'",
    "sport_type": "Run",
    "start_local": "2026-09-02T19:34:11",
@@ -321,7 +321,7 @@
    }
   },
   {
-   "id": 19978696424,
+   "id": "19978696424",
    "name": "Evening Run",
    "sport_type": "Run",
    "start_local": "2026-08-31T18:02:19",
@@ -331,7 +331,7 @@
    }
   },
   {
-   "id": 19960085014,
+   "id": "19960085014",
    "name": "Carrera de mañana",
    "sport_type": "Run",
    "start_local": "2026-08-30T10:20:32",
@@ -341,7 +341,7 @@
    }
   },
   {
-   "id": 19912139228,
+   "id": "19912139228",
    "name": "6x1000 @3:58 R 1'30",
    "sport_type": "Run",
    "start_local": "2026-08-26T18:57:08",
@@ -351,7 +351,7 @@
    }
   },
   {
-   "id": 19868380328,
+   "id": "19868380328",
    "name": "Carrera de tarde",
    "sport_type": "Run",
    "start_local": "2026-08-23T17:28:35",
@@ -361,7 +361,7 @@
    }
   },
   {
-   "id": 19839248872,
+   "id": "19839248872",
    "name": "Carrera de tarde",
    "sport_type": "Run",
    "start_local": "2026-08-21T17:39:55",
@@ -371,7 +371,7 @@
    }
   },
   {
-   "id": 19826335611,
+   "id": "19826335611",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-08-20T18:02:24",
@@ -381,7 +381,7 @@
    }
   },
   {
-   "id": 19812880165,
+   "id": "19812880165",
    "name": "Carrera de tarde",
    "sport_type": "Run",
    "start_local": "2026-08-19T17:00:00",
@@ -391,7 +391,7 @@
    }
   },
   {
-   "id": 19783242181,
+   "id": "19783242181",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-08-17T19:02:08",
@@ -401,7 +401,7 @@
    }
   },
   {
-   "id": 19770809394,
+   "id": "19770809394",
    "name": "Carrera de noche",
    "sport_type": "Run",
    "start_local": "2026-08-16T18:56:07",
@@ -411,7 +411,7 @@
    }
   },
   {
-   "id": 19742130571,
+   "id": "19742130571",
    "name": "Volví",
    "sport_type": "Run",
    "start_local": "2026-08-14T18:40:56",
