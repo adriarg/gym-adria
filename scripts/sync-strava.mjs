@@ -32,7 +32,7 @@ const api = async (url) => {
 const todas = [];
 for (let page = 1; ; page++) {
   const lote = await api(`/athlete/activities?after=${DESDE}&per_page=200&page=${page}`);
-  todas.push(...lote);
+  todas.push(...lote.map((a) => ({...a, id: a.id_str || String(a.id)}))); // Strava: id de 64 bits desde 2027-06-01, en JS solo es exacto el texto
   if (lote.length < 200) break;
 }
 
