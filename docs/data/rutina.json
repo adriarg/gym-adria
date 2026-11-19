@@ -6,13 +6,13 @@
     "orden": 1,
     "ejercicio": "Press de pecho iso-lateral",
     "maquina": "MTS CHEST PRESS (HAMMER STRENGTH)",
-    "hevy": "Iso-Lateral Chest Press (Machine)",
+    "hevy": "MTS Chest Press",
     "musculo": "Pecho",
     "zona": "Pectoral mayor (parte media), con tríceps y deltoides anterior",
     "series": 3,
     "reps": "6–10",
     "descanso": "2–3 min",
-    "nota": "Banco a la altura 7. Un solo peso para las 3 series.",
+    "nota": "Banco a la altura 7. Un solo peso para las 3 series. Si al final te ayudas con las piernas, esa rep no cuenta: pies quietos y glúteo pegado al asiento.",
     "principal": [
       "pec_est"
     ],
@@ -72,7 +72,7 @@
     "orden": 3,
     "ejercicio": "Press inclinado iso-lateral",
     "maquina": "ISO-LATERAL INCLINE PRESS (HAMMER STRENGTH)",
-    "hevy": "Incline Chest Press (Machine)",
+    "hevy": "Iso-Lateral Chest Press (Machine)",
     "musculo": "Pecho",
     "zona": "Pecho alto (porción clavicular)",
     "series": 2,
@@ -108,7 +108,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Apunta el peso por brazo. Escápulas atrás antes de tirar y pausa de 1 s con los omóplatos juntos.",
+    "nota": "Apunta la suma de los dos lados. Escápulas atrás antes de tirar y pausa de 1 s con los omóplatos juntos.",
     "principal": [
       "trap_med",
       "romboides",
@@ -172,7 +172,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "90 s",
-    "nota": "Codos pegados al cuerpo. Gira la muñeca hacia fuera al subir y baja en 2–3 s hasta estirar el brazo del todo. Sustituye al curl predicador, que te molestaba cerca del codo.",
+    "nota": "Codos pegados al cuerpo. Gira la muñeca hacia fuera al subir y baja en 2–3 s hasta estirar el brazo del todo. Sustituye al curl predicador, que te molestaba cerca del codo. Elige un peso con el que hagas 10–12 en la 1ª serie dejando 1–2 en reserva; si la 2ª cae a 8, la 1ª fue demasiado al límite.",
     "principal": [
       "bic_corta",
       "bic_larga"
@@ -228,7 +228,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min (entre piernas, 30 s)",
-    "nota": "Pie de atrás apoyado en el banco con el empeine. Paso largo: al bajar, la rodilla de delante no se va hacia dentro. Tronco un poco inclinado hacia delante para que trabaje más el glúteo. Empieza siempre por la pierna más floja y haz las mismas reps con la otra. El peso es el de cada mancuerna.",
+    "nota": "Pie de atrás apoyado en el banco con el empeine. Paso largo: al bajar, la rodilla de delante no se va hacia dentro. Tronco un poco inclinado hacia delante para que trabaje más el glúteo. Empieza siempre por la pierna más floja y haz las mismas reps con la otra. El peso es el de cada mancuerna. Las series de 0 kg márcalas como calentamiento en Hevy (máximo 1 por pierna).",
     "principal": [
       "vastos",
       "glut_max"
@@ -287,7 +287,7 @@
     "series": 3,
     "reps": "10–12",
     "descanso": "90 s",
-    "nota": "Inclínate un poco hacia delante para estirar más.",
+    "nota": "Inclínate un poco hacia delante para estirar más. Pies flexionados hacia ti y tensos: con eso rindes mucho más.",
     "principal": [
       "isq_largos",
       "isq_bfc"
@@ -315,7 +315,7 @@
     "series": 2,
     "reps": "8–12",
     "descanso": "2–3 min",
-    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo.",
+    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo. Nunca al fallo: si te salen más de 12, sube peso en vez de seguir.",
     "principal": [
       "vastos",
       "glut_max"
@@ -343,7 +343,7 @@
     "series": 2,
     "reps": "8–10",
     "descanso": "2–3 min",
-    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
+    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie. Apunta en Hevy solo los discos, sin los 20 kg de la barra. Con la barra sola hasta que no moleste la lumbar 2 sesiones seguidas; entonces +2,5 kg por lado. Si duele, para y pídele a tu entrenadora que te mire la técnica.",
     "principal": [
       "isq_largos",
       "glut_max"
@@ -373,7 +373,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "60–90 s",
-    "nota": "Enrolla la columna; no tires con los brazos.",
+    "nota": "Enrolla la columna; no tires con los brazos. Quédate en 15 kg hasta hacer 15 reps en las 3 series. Si al final empujas con las piernas, termina la serie ahí.",
     "principal": [
       "recto_abd"
     ],
@@ -427,7 +427,7 @@
     "series": 3,
     "reps": "6–10",
     "descanso": "2–3 min",
-    "nota": "Ejercicio principal del día: aquí va la carga.",
+    "nota": "Ejercicio principal del día: aquí va la carga. Hazlo el primero, con el pecho fresco: al final de la sesión rindes mucho menos.",
     "principal": [
       "pec_clav"
     ],
@@ -493,7 +493,7 @@
     "series": 5,
     "reps": "12–20",
     "descanso": "60–90 s (entre brazos, nada)",
-    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila.",
+    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila. Las últimas reps que no llegan a la altura del hombro también cuentan (las parciales con el músculo estirado hacen crecer). Que pese más de lo que marca la pila es por la polea: apunta siempre lo que marca.",
     "principal": [
       "del_lat"
     ],
@@ -545,7 +545,7 @@
     "orden": 5,
     "ejercicio": "Aperturas en pec deck",
     "maquina": "MULTI PEC/DEC (WATSON)",
-    "hevy": "Butterfly (Pec Deck)",
+    "hevy": "Peck Fly (Máquina)",
     "musculo": "Pecho",
     "zona": "Pectoral en estiramiento",
     "series": 3,
@@ -580,7 +580,7 @@
     "series": 3,
     "reps": "12–20",
     "descanso": "60–90 s",
-    "nota": "Pecho contra el respaldo, brazos casi estirados.",
+    "nota": "Pecho contra el respaldo, brazos casi estirados. Un solo peso para las 3 series: no saltes de peso entre series.",
     "principal": [
       "del_post"
     ],
@@ -609,7 +609,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "60–90 s",
-    "nota": "Enrolla la columna; no tires con los brazos.",
+    "nota": "Enrolla la columna; no tires con los brazos. Quédate en 15 kg hasta hacer 15 reps en las 3 series. Si al final empujas con las piernas, termina la serie ahí.",
     "principal": [
       "recto_abd"
     ],
@@ -637,7 +637,7 @@
     "series": 3,
     "reps": "8–10",
     "descanso": "2–3 min",
-    "nota": "Primero, técnica. Barra apoyada en la parte alta de la espalda (no en el cuello), pies a la anchura de los hombros con las puntas un poco abiertas. Coge aire, aprieta el abdomen como si te fueran a dar un golpe y baja con las rodillas siguiendo la línea de los pies, hasta que el muslo quede al menos paralelo al suelo. Sube empujando el suelo sin soltar el aire hasta arriba. Pon los topes de seguridad del rack un poco por debajo de tu bajada. Grábate de lado la primera serie y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
+    "nota": "Primero, técnica. Barra apoyada en la parte alta de la espalda (no en el cuello), pies a la anchura de los hombros con las puntas un poco abiertas. Coge aire, aprieta el abdomen como si te fueran a dar un golpe y baja con las rodillas siguiendo la línea de los pies, hasta que el muslo quede al menos paralelo al suelo. Sube empujando el suelo sin soltar el aire hasta arriba. Pon los topes de seguridad del rack un poco por debajo de tu bajada. Grábate de lado la primera serie y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra. Si la barra te duele en la espalda: aprieta los omóplatos para hacer un «cojín» con el trapecio y cierra un poco el agarre.",
     "principal": [
       "vastos",
       "glut_max"
@@ -697,7 +697,7 @@
     "series": 3,
     "reps": "5–8",
     "descanso": "2–3 min",
-    "nota": "Barra encima de la mitad del pie, pies a la anchura de las caderas. Agarra la barra justo por fuera de las piernas, pecho arriba y espalda recta. Coge aire, aprieta el abdomen y empuja el suelo con las piernas, con la barra rozando las piernas todo el rato. Arriba, cadera estirada sin echarte atrás. Baja con el mismo control. Si la espalda se redondea, baja peso. Grábate de lado y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra.",
+    "nota": "Barra encima de la mitad del pie, pies a la anchura de las caderas. Agarra la barra justo por fuera de las piernas, pecho arriba y espalda recta. Coge aire, aprieta el abdomen y empuja el suelo con las piernas, con la barra rozando las piernas todo el rato. Arriba, cadera estirada sin echarte atrás. Baja con el mismo control. Si la espalda se redondea, baja peso. Grábate de lado y enséñaselo a tu entrenadora. Apunta en Hevy solo los discos, sin los 20 kg de la barra. Rango 5–8 en todas las series: no hagas 12 en la 1ª ni subas peso en la última para probar.",
     "principal": [
       "glut_max",
       "isq_largos",
@@ -758,7 +758,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Espalda alta apoyada, pies planos y espinillas verticales arriba. Sube apretando el glúteo, aguanta 1 s arriba sin arquear la zona lumbar (mira al frente, barbilla un poco metida). Apunta solo los discos.",
+    "nota": "Espalda alta apoyada, pies planos y espinillas verticales arriba. Sube apretando el glúteo, aguanta 1 s arriba sin arquear la zona lumbar (mira al frente, barbilla un poco metida). Apunta solo los discos. Calienta siempre con 1 serie ligera. Arriba, costillas abajo y pelvis hacia atrás: así trabaja el glúteo y no la lumbar.",
     "principal": [
       "glut_max"
     ],
@@ -786,7 +786,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "Deja colgar los brazos detrás del cuerpo.",
+    "nota": "Deja colgar los brazos detrás del cuerpo. Peso con el que hagas las 3 series en rango; si la 2ª cae mucho, es demasiado.",
     "principal": [
       "bic_larga"
     ],
@@ -814,7 +814,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Codos pegados al cuerpo.",
+    "nota": "Codos pegados al cuerpo. Cinturón y asiento al 12. Si la 2ª serie cae mucho, descansa 3 min.",
     "principal": [
       "tri_lateral",
       "tri_medial"

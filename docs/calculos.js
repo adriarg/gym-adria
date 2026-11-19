@@ -191,7 +191,13 @@ dash.calc('sugerencias', {
       const marca = (f) => { const d = v.filter((s) => s.fecha === f), t = Math.max(...d.map((s) => s.kg)); return [t, d.filter((s) => s.kg === t).reduce((n, s) => n + (s.reps || 0), 0)]; };
       const m3 = fechas.map(marca);
       const estancado = m3.length === 3 && m3[1][0] <= m3[0][0] && m3[2][0] <= m3[0][0] && m3[1][1] <= m3[0][1] && m3[2][1] <= m3[0][1];
-      if (estancado) consejo += ' Llevas 3 sesiones sin mejorar aquí: respeta el descanso de la ficha y llega cerca del fallo en la última serie. Si la próxima tampoco sube, baja un 10 % el peso y vuelve a subir desde ahí.';
+      // Caída fuerte de la 1ª a la 2ª serie con el mismo peso: poco descanso o 1ª serie demasiado al límite.
+      if (reps.length > 1 && reps[0] - reps[1] >= 3) consejo += ' La 2ª serie cayó de ' + reps[0] + ' a ' + reps[1] + ' reps: descansa ' + r.descanso + ' con el temporizador y deja 1–2 reps en reserva en la 1ª.';
+      // Series muy ligeras antes de la primera con el peso tope: calentamientos que no se marcaron en Hevy.
+      const primera = Math.min(...enTop.map((s) => s.serie));
+      const ligeras = series.filter((s) => s.mast && s.ejercicio === r.hevy && s.fecha === fecha && s.serie < primera && s.kg != null && s.kg < top * 0.6).length;
+      if (ligeras) consejo += ' La última vez hubo ' + ligeras + (ligeras > 1 ? ' series muy ligeras' : ' serie muy ligera') + ' sin marcar: si era calentamiento, márcala como «Warm-up» en Hevy.';
+      if (estancado) consejo +=' Llevas 3 sesiones sin mejorar aquí: respeta el descanso de la ficha y llega cerca del fallo en la última serie. Si la próxima tampoco sube, baja un 10 % el peso y vuelve a subir desde ahí.';
       return Object.assign(base, {kg: Math.round(kg * 100) / 100, origen: 'historial', ultima_fecha: fecha, ultimas, consejo, estancado});
     });
   }
