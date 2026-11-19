@@ -25,7 +25,7 @@ const cargar = (acts) => loaders.gym.fn({answer: {activities: acts}}).rows;
 const series = (acts) => calcs.series.fn(cargar(acts), musculos);
 const sug = (acts, id) => calcs.sugerencias.fn(rutina, series(acts)).find((r) => r.id === id);
 const ej = (id) => rutina.find((r) => r.id === id);
-const PRESS = 'Iso-Lateral Chest Press (Machine)';
+const PRESS = ej('L1').hevy;
 
 test('la rutina tiene todos los campos que usa la web', () => {
   assert.equal(new Set(rutina.map((r) => r.id)).size, rutina.length, 'ids repetidos');
@@ -123,4 +123,12 @@ test('cobertura del plan: todas las partes prioritarias salen calculadas', () =>
   assert.ok(c.length > 0);
   for (const f of c) assert.equal(f.efectivas, f.directas + f.indirectas / 2);
   assert.ok(!c.some((f) => f.prioridad === 'Alta' && f.estado === 'Sin trabajo'), 'hay una parte prioritaria sin trabajo');
+});
+
+test('peso sugerido: avisa de la caída de reps y de calentamientos sin marcar', () => {
+  const r = sug([sesion(1, '2026-11-09', PRESS + '\nSet 1: 10 kg x 10\nSet 2: 25 kg x 10\nSet 3: 25 kg x 6\nSet 4: 25 kg x 6')], 'L1');
+  assert.match(r.consejo, /cayó de 10 a 6/);
+  assert.match(r.consejo, /1 serie muy ligera/);
+  const ok = sug([sesion(1, '2026-11-09', PRESS + '\nSet 1: 10 kg x 10 [Warm-up]\nSet 2: 25 kg x 10\nSet 3: 25 kg x 9')], 'L1');
+  assert.doesNotMatch(ok.consejo, /cayó|ligera/);
 });

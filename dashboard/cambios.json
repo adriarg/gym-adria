@@ -1,5 +1,17 @@
 [
  {
+  "fecha": "2026-11-19",
+  "id": "L1, L3, J5",
+  "cambio": "Nombres de Hevy corregidos: L1 «MTS Chest Press», L3 «Iso-Lateral Chest Press (Machine)», J5 «Peck Fly (Máquina)»",
+  "motivo": "Son los nombres que Adrià usa de verdad en Hevy; con los antiguos el plan no se emparejaba con lo hecho."
+ },
+ {
+  "fecha": "2026-11-19",
+  "id": "Todos",
+  "cambio": "Consejos de técnica y de carga añadidos dentro de cada ejercicio, y avisos automáticos en «Peso de hoy» cuando la 2ª serie cae 3 reps o más o hay calentamientos sin marcar",
+  "motivo": "Revisión de todas las sesiones del 2 al 17 de noviembre: la 2ª serie cae mucho (12→8, 11→7) de forma repetida, hay pesos que cambian entre series y series de 0 kg sin marcar como calentamiento."
+ },
+ {
   "fecha": "2026-11-09",
   "id": "L6",
   "cambio": "Curl predicador alternado → Curl con mancuernas de pie",
