@@ -132,3 +132,8 @@ test('peso sugerido: avisa de la caída de reps y de calentamientos sin marcar',
   const ok = sug([sesion(1, '2026-11-09', PRESS + '\nSet 1: 10 kg x 10 [Warm-up]\nSet 2: 25 kg x 10\nSet 3: 25 kg x 9')], 'L1');
   assert.doesNotMatch(ok.consejo, /cayó|ligera/);
 });
+
+test('peso sugerido: en pirámide, si la serie tope se pasa mucho del rango, sube', () => {
+  const r = sug([sesion(1, '2026-11-13', PRESS + '\nSet 1: 15 kg x 12\nSet 2: 20 kg x 15\nSet 3: 25 kg x 15')], 'L1');
+  assert.equal(r.kg, 25 + ej('L1').incremento);
+});
