@@ -31,6 +31,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Desde el 2026-11-13, en el curl MTS (V2), el curl inclinado con mancuernas (V4) y los fondos SEATED DIP (V1) Adrià apunta en Hevy la SUMA de los dos brazos o pilas. Para comparar con la rutina (por brazo), divide entre 2.
 - 2026-11-19: nombres reales que usa en Hevy: L1 «MTS Chest Press», L3 «Iso-Lateral Chest Press (Machine)» (es la máquina inclinada iso-lateral; suposición por su nota «piernas en V», sin confirmar), J5 «Peck Fly (Máquina)». «Peso de hoy» avisa si la 2ª serie cae ≥3 reps o hay series ligeras sin marcar como calentamiento.
 - 2026-11-19: Adrià quiere cambiar los días desde el lunes 2026-11-23 (hay menos cola): L Pierna (M*) · M Torso A (L*) · J Pierna + brazos (V*) · V Torso B (J*). Los ids no cambian, solo el campo `dia`. Rodaje suave mejor el sábado (no el miércoles, que va antes de pierna).
+- 2026-11-19: en el High Row le duelen las manos y a veces para antes por eso (no por la espalda): probar correas o agarre más relajado.
 - 2026-11-13: en la sentadilla con barra le duele el apoyo de la barra en la espalda. En los fondos usa cinturón y el asiento al 12.
 - No tiene Hevy Pro, así que no hay API de Hevy: las rutinas en Hevy las cambia él a mano. Cuando cambies un ejercicio, recuérdale qué tocar en Hevy (el nombre exacto está en el campo `hevy`).
 
