@@ -373,7 +373,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "60–90 s",
-    "nota": "Enrolla la columna; no tires con los brazos. Quédate en 15 kg hasta hacer 15 reps en las 3 series. Si al final empujas con las piernas, termina la serie ahí.",
+    "nota": "Enrolla la columna; no tires con los brazos. Un solo peso en las 3 series (no subas serie a serie) hasta hacer 15 reps en todas. Si al final empujas con las piernas, termina la serie ahí.",
     "principal": [
       "recto_abd"
     ],
@@ -493,7 +493,7 @@
     "series": 5,
     "reps": "12–20",
     "descanso": "60–90 s (entre brazos, nada)",
-    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila. Las últimas reps que no llegan a la altura del hombro también cuentan (las parciales con el músculo estirado hacen crecer). Que pese más de lo que marca la pila es por la polea: apunta siempre lo que marca. Si con 4 kg no llegas a 12 reps, haz todas las series con 2 kg. En Hevy el calentamiento son 2 series de Warm-up (una por brazo).",
+    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila. Las últimas reps que no llegan a la altura del hombro también cuentan (las parciales con el músculo estirado hacen crecer). Que pese más de lo que marca la pila es por la polea: apunta siempre lo que marca. Si no llegas a 12 reps, baja de peso y haz todas las series con el mismo. En Hevy el calentamiento son 2 series de Warm-up (una por brazo).",
     "principal": [
       "del_lat"
     ],
@@ -505,7 +505,7 @@
     "calentamiento": "1 serie de 12 reps muy ligera con cada brazo (en Hevy, 2 Warm-up)",
     "esfuerzo": "Series 1 a 3: deja 1–2 reps en reserva. Última serie: al fallo.",
     "peso_inicial": 5,
-    "incremento": 2.5,
+    "incremento": 2,
     "peso_min": 0
   },
   {
@@ -609,7 +609,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "60–90 s",
-    "nota": "Enrolla la columna; no tires con los brazos. Quédate en 15 kg hasta hacer 15 reps en las 3 series. Si al final empujas con las piernas, termina la serie ahí.",
+    "nota": "Enrolla la columna; no tires con los brazos. Un solo peso en las 3 series (no subas serie a serie) hasta hacer 15 reps en todas. Si al final empujas con las piernas, termina la serie ahí.",
     "principal": [
       "recto_abd"
     ],
@@ -798,7 +798,7 @@
     "calentamiento": "",
     "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
     "peso_inicial": 8,
-    "incremento": 1,
+    "incremento": 4,
     "peso_min": 0
   },
   {
