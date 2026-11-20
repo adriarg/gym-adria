@@ -162,7 +162,7 @@ dash.calc('sugerencias', {
   inputs: ['rutina', 'series'],
   fn: (rutina, series) => {
     const porEj = {};
-    for (const s of series) if (s.mast && s.kg != null && s.kg > 0) (porEj[s.ejercicio] = porEj[s.ejercicio] || []).push(s);
+    for (const s of series) if (s.mast && s.kg != null && s.kg >= 0) (porEj[s.ejercicio] = porEj[s.ejercicio] || []).push(s);
     const fmt = (x) => String(x).replace('.', ',');
     return rutina.map((r) => {
       const [lo, hi] = String(r.reps).split(/[–-]/).map(Number);
