@@ -108,7 +108,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Apunta la suma de los dos lados. Escápulas atrás antes de tirar y pausa de 1 s con los omóplatos juntos.",
+    "nota": "Apunta la suma de los dos lados. Escápulas atrás antes de tirar y pausa de 1 s con los omóplatos juntos. Si te duelen las manos, usa correas o agarra suelto con los dedos como ganchos, para que pare la espalda y no las manos.",
     "principal": [
       "trap_med",
       "romboides",
@@ -457,7 +457,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Asiento en 9.",
+    "nota": "Asiento en 9. Si te duelen las manos, usa correas o agarra suelto con los dedos como ganchos, para que pare la espalda y no las manos.",
     "principal": [
       "dorsal",
       "redondo_mayor"
@@ -493,7 +493,7 @@
     "series": 5,
     "reps": "12–20",
     "descanso": "60–90 s (entre brazos, nada)",
-    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila. Las últimas reps que no llegan a la altura del hombro también cuentan (las parciales con el músculo estirado hacen crecer). Que pese más de lo que marca la pila es por la polea: apunta siempre lo que marca.",
+    "nota": "Polea en lo más bajo, con el agarre de un solo mango. Ponte de lado a la máquina y tira con el brazo más lejano, de modo que el cable pase por delante del cuerpo. Sube con el codo un poco doblado hasta la altura del hombro, sin encoger el trapecio ni balancear el cuerpo, y baja despacio. Haz todas las reps con un brazo y luego con el otro. Apunta el peso que marca la pila. Las últimas reps que no llegan a la altura del hombro también cuentan (las parciales con el músculo estirado hacen crecer). Que pese más de lo que marca la pila es por la polea: apunta siempre lo que marca. Si con 4 kg no llegas a 12 reps, haz todas las series con 2 kg. En Hevy el calentamiento son 2 series de Warm-up (una por brazo).",
     "principal": [
       "del_lat"
     ],
@@ -502,7 +502,7 @@
       "trap_sup"
     ],
     "foto": "2x-universal-dap-polea-doble",
-    "calentamiento": "1 serie de 12 reps muy ligera por brazo",
+    "calentamiento": "1 serie de 12 reps muy ligera con cada brazo (en Hevy, 2 Warm-up)",
     "esfuerzo": "Series 1 a 3: deja 1–2 reps en reserva. Última serie: al fallo.",
     "peso_inicial": 5,
     "incremento": 2.5,
@@ -521,7 +521,7 @@
     "series": 2,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "Recorrido completo, estira arriba.",
+    "nota": "Recorrido completo, estira arriba. Mismo peso en las 2 series, sin saltar de peso.",
     "principal": [
       "dorsal"
     ],
@@ -551,7 +551,7 @@
     "series": 3,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "Mismo peso en las 3 series. Empieza sobre 40 kg.",
+    "nota": "Mismo peso en las 3 series. Empieza sobre 40 kg. No hace falta parar con las manos juntas: lo que más hace crecer es abrir despacio, en la parte donde el pecho se estira.",
     "principal": [
       "pec_est",
       "pec_cost"
