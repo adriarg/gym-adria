@@ -183,7 +183,7 @@ dash.calc('sugerencias', {
       const rejilla = (x) => { const b = r.peso_base || 0; return b + Math.floor((x - b) / inc + 1e-9) * inc; };
       const pocas = reps.length < r.series;
       let kg, consejo;
-      if (!pocas && reps.every((x) => x >= hi)) { kg = top + inc; consejo = 'Hiciste el tope de reps en todas las series: toca subir.'; }
+      if (reps.every((x) => x >= hi) && (!pocas || reps.every((x) => x > hi + 2))) { kg = top + inc; consejo = pocas ? 'Con ' + fmt(top) + ' kg te pasaste del rango (' + reps.join(' · ') + ' reps): toca subir.' : 'Hiciste el tope de reps en todas las series: toca subir.'; }
       else if (reps.every((x) => x >= lo - 1) && !(fallo && pocas)) { kg = top; consejo = pocas ? 'Haz las ' + r.series + ' series con este peso; cuando llegues a ' + hi + ' reps en todas, sube.' : 'Mismo peso: intenta sumar 1 rep por serie hasta llegar a ' + hi + '.'; }
       else { kg = Math.max(r.peso_min || 0, rejilla(e1 / (1 + (lo + (fallo ? 6 : 4)) / 30))); consejo = 'Calculado con tu mejor serie para que hagas ' + lo + '–' + hi + ' reps con 2 de margen.'; }
       // Estancado: tres sesiones seguidas con el mismo peso tope sin sumar ni una rep.
