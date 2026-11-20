@@ -13,6 +13,22 @@ const ESTADO_CLASE = {'Cubierto': 'mg-ok', 'Por debajo': 'mg-warn', 'Sin trabajo
 const fSemana = (w) => d3.utcFormat('%-d %b')(new Date(w + 'T00:00:00Z'));
 const fFecha = (f) => d3.utcFormat('%-d %b %Y')(new Date(f + 'T00:00:00Z'));
 const fKg = d3.format(',.1~f');
+
+// Calentamiento con kilos: «1 serie de 8 reps con la mitad del peso» → «20 kg × 8» (redondeado a los saltos de la máquina).
+const mgCalentar = (r, kg) => {
+  const t = r.calentamiento, reps = (t.match(/(\d+) reps/) || [])[1];
+  const f = /dos tercios/i.test(t) ? 2 / 3 : /mitad|ligera/i.test(t) ? 0.5 : null;
+  if (kg == null || !f || !reps) return t;
+  const inc = r.incremento || 2.5, x = Math.max(0, Math.round(kg * f / inc) * inc);
+  return fKg(x) + ' kg × ' + reps + (/brazo/i.test(t) ? ' por brazo' : /pierna/i.test(t) ? ' por pierna' : '');
+};
+// «Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.» → «última al fallo»; «Deja 1–2 reps en reserva…» → «1–2 en reserva».
+const mgReserva = (e) => {
+  if (!e) return '';
+  if (/al fallo/i.test(e) && !/nunca al fallo/i.test(e)) return 'última al fallo';
+  const m = e.match(/(\d(?:–\d)?) reps? en reserva/);
+  return m ? m[1] + ' en reserva' : e;
+};
 const fPct = d3.format('+.0%');
 const enc = (v) => encodeURIComponent(String(v));
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -208,15 +224,20 @@ dash.draw('rutina-dia', (ul) => {
     media.append(peso);
     const dl = el('dl', 'mg-dl');
     const fila = (k, ...v) => { const dd = el('dd'); dd.append(...v); dl.append(el('dt', null, k), dd); return dd; };
-    fila('Calentar', r.calentamiento ? mark('span', 'rutina', w, 'calentamiento', r.calentamiento) : 'No hace falta: ya estás caliente.');
-    const work = fila('Trabajo', mark('span', 'rutina', w, 'series', String(r.series)), ' series × ', mark('span', 'rutina', w, 'reps', r.reps), ' reps');
-    work.className = 'mg-work';
-    fila('Descanso', mark('span', 'rutina', w, 'descanso', r.descanso));
-    fila('Esfuerzo', mark('span', 'rutina', w, 'esfuerzo', r.esfuerzo));
-    fila('Técnica', mark('span', 'rutina', w, 'nota', r.nota));
-    fila('Trabaja', mark('span', 'rutina', w, 'zona', r.zona));
+    // Nota en el formato que Adrià copia en Hevy: «MÁQUINA — ZONA», calentamiento, trabajo y técnica.
+    const kg = sg && sg.kg != null ? sg.kg : null;
+    const nota = el('div', 'mg-hevy-nota');
+    nota.style.borderLeft = '4px solid ' + c;
+    const linea = (k, ...v) => { const p = el('p'); if (k) p.append(el('b', null, k + ': ')); p.append(...v); nota.append(p); };
+    const cab = el('p', 'mg-hevy-cab', r.maquina + ' — ' + String(r.zona || r.musculo).split(/[:,]/)[0].toUpperCase());
+    cab.style.color = c;
+    nota.append(cab);
+    linea('Calentamiento', r.calentamiento ? mgCalentar(r, kg) : 'no hace falta');
+    const work = el('span', 'mg-work', r.series + ' × ' + r.reps + (kg != null ? ' con ' + fKg(kg) + ' kg' : '') + ' · descanso ' + r.descanso + ' · ' + mgReserva(r.esfuerzo));
+    linea('', work);
+    linea('Técnica', mark('span', 'rutina', w, 'nota', r.nota));
     fila('En Hevy', mark('span', 'rutina', w, 'hevy', r.hevy, 'mg-code'));
-    li.append(top, fotoBox, media, dl);
+    li.append(top, fotoBox, media, nota, dl);
     return li;
   }));
 });
