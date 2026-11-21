@@ -1,5 +1,11 @@
 [
  {
+  "fecha": "2026-11-23",
+  "id": "Todos",
+  "cambio": "Cambio de días: lunes Pierna, martes Torso A, jueves Pierna + brazos, viernes Torso B (mismos ejercicios, series y orden)",
+  "motivo": "Hay menos cola en las máquinas de pierna los lunes y de torso los martes. Cada grupo sigue con 2 días entre sesiones; los brazos pasan a martes y jueves (48 h, suficiente). Rodaje suave mejor el sábado, no antes del jueves de pierna."
+ },
+ {
   "fecha": "2026-11-19",
   "id": "L1, L3, J5",
   "cambio": "Nombres de Hevy corregidos: L1 «MTS Chest Press», L3 «Iso-Lateral Chest Press (Machine)», J5 «Peck Fly (Máquina)»",
