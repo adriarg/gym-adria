@@ -118,5 +118,17 @@
   "id": "J8",
   "cambio": "Jueves: elevación lateral en polea pasa de 4 a 5 series.",
   "motivo": "El hombro lateral (prioridad alta) llega así a 9 de 10 series efectivas; no puede ir el viernes porque se trabaja el jueves."
+ },
+ {
+  "fecha": "2026-11-24",
+  "id": "L6",
+  "cambio": "Martes: el curl con mancuernas de pie pasa a ser el curl inclinado (que estaba el jueves).",
+  "motivo": "El inclinado trabaja el bíceps estirado (cabeza larga) y rinde más fresco que detrás del curl MTS. El de pie no aportaba nada que no dieran la MTS y el inclinado."
+ },
+ {
+  "fecha": "2026-11-24",
+  "id": "V4",
+  "cambio": "Jueves: el curl inclinado se sustituye por el curl martillo con mancuernas, 3 × 8–12.",
+  "motivo": "Más braquial y braquiorradial (grosor del brazo y antebrazo). Bíceps sigue por encima del objetivo: cabeza larga ≈12/10, corta ≈10,5/10; braquial 10,5/6, braquiorradial 9/4."
  }
 ]

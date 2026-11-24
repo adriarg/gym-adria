@@ -170,27 +170,27 @@
     "bloque": "Torso A",
     "orden": 6,
     "fase": 2,
-    "ejercicio": "Curl con mancuernas de pie",
-    "maquina": "MANCUERNAS 2–50 KG",
-    "hevy": "Bicep Curl (Dumbbell)",
+    "ejercicio": "Curl inclinado con mancuernas",
+    "maquina": "BANCO AJUSTABLE A 45–60° + MANCUERNAS",
+    "hevy": "Seated Incline Curl (Dumbbell)",
     "musculo": "Bíceps",
-    "zona": "Bíceps completo (cabezas corta y larga) y braquial",
+    "zona": "Cabeza larga del bíceps en estiramiento (el pico)",
     "series": 3,
-    "reps": "8–12",
+    "reps": "10–15",
     "descanso": "90 s",
-    "nota": "Codos pegados al cuerpo. Gira la muñeca hacia fuera al subir y baja en 2–3 s hasta estirar el brazo del todo. Sustituye al curl predicador, que te molestaba cerca del codo. Elige un peso con el que hagas 10–12 en la 1ª serie dejando 1–2 en reserva; si la 2ª cae a 8, la 1ª fue demasiado al límite.",
+    "nota": "Deja colgar los brazos detrás del cuerpo. Peso con el que hagas las 3 series en rango; si la 2ª cae mucho, es demasiado. En Hevy, el peso es la suma de las dos mancuernas.",
     "principal": [
-      "bic_corta",
       "bic_larga"
     ],
     "secundario": [
+      "bic_corta",
       "braquial"
     ],
     "foto": "mancuernas-uretano-2-50-kg",
-    "calentamiento": "1 serie de 12 reps con 4–6 kg",
+    "calentamiento": "",
     "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 10,
-    "incremento": 2,
+    "peso_inicial": 8,
+    "incremento": 4,
     "peso_min": 0
   },
   {
@@ -207,7 +207,7 @@
     "series": 4,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "De espaldas a la polea (a la altura de la cabeza o un poco más baja), un pie adelantado y el tronco algo inclinado hacia delante, con el abdomen apretado para no arquear la lumbar. Codos junto a la cabeza y apuntando al frente; baja hasta notar el tríceps bien estirado y extiende sin mover los codos.",
+    "nota": "De espaldas a la polea (a la altura de la cabeza o un poco más baja), un pie adelantado y el tronco algo inclinado hacia delante, con el abdomen apretado para no arquear la lumbar. Codos junto a la cabeza y apuntando al frente; baja hasta notar el tríceps bien estirado y extiende sin mover los codos. Usa la cuerda doble larga. Cambia el pie adelantado en cada serie.",
     "principal": [
       "tri_larga"
     ],
@@ -805,26 +805,27 @@
     "bloque": "Pierna + brazos",
     "orden": 6,
     "fase": 2,
-    "ejercicio": "Curl inclinado con mancuernas",
-    "maquina": "BANCO AJUSTABLE A 45–60° + MANCUERNAS",
-    "hevy": "Seated Incline Curl (Dumbbell)",
+    "ejercicio": "Curl martillo con mancuernas",
+    "maquina": "MANCUERNAS 2–50 KG",
+    "hevy": "Hammer Curl (Dumbbell)",
     "musculo": "Bíceps",
-    "zona": "Cabeza larga del bíceps en estiramiento (el pico)",
+    "zona": "Braquial y braquiorradial (grosor del brazo visto de lado y parte alta del antebrazo)",
     "series": 3,
-    "reps": "10–15",
+    "reps": "8–12",
     "descanso": "90 s",
-    "nota": "Deja colgar los brazos detrás del cuerpo. Peso con el que hagas las 3 series en rango; si la 2ª cae mucho, es demasiado.",
+    "nota": "Palmas mirándose entre sí todo el rato (como si cogieras un martillo). Codos pegados al cuerpo, sin balancear; baja en 2–3 s hasta estirar el brazo. De pie, los dos brazos a la vez. En Hevy, el peso es la suma de las dos mancuernas (20 = 10 kg cada una).",
     "principal": [
-      "bic_larga"
+      "braquial",
+      "braquiorradial"
     ],
     "secundario": [
-      "bic_corta",
-      "braquial"
+      "bic_larga",
+      "bic_corta"
     ],
     "foto": "mancuernas-uretano-2-50-kg",
-    "calentamiento": "",
+    "calentamiento": "1 serie de 12 reps con unos dos tercios del peso",
     "esfuerzo": "Series 1 y 2: deja 1 rep en reserva. Última serie: al fallo.",
-    "peso_inicial": 8,
+    "peso_inicial": 20,
     "incremento": 4,
     "peso_min": 0
   },
