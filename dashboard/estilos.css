@@ -112,3 +112,12 @@
 .mg-hevy-nota { margin: 12px 0; padding: 10px 14px; background: var(--mg-soft, rgba(127,127,127,.08)); border-radius: 8px; line-height: 1.5; }
 .mg-hevy-nota p { margin: 2px 0; }
 .mg-hevy-cab { font-weight: 800; letter-spacing: .02em; margin-bottom: 6px !important; }
+/* «Ocupada → ¿y ahora?» */
+.mg-guia { grid-column: 1 / -1; position: sticky; top: 0; z-index: 2; display: flex; flex-direction: column; gap: 4px; padding: var(--cds-pad-md); border-radius: var(--cds-radius); background: var(--color-panel); border: 2px solid var(--g-pierna); }
+.mg-guia b { font-size: var(--cds-font-size-heading); color: var(--g-pierna); }
+.mg-ya { display: flex; gap: var(--cds-gap-sm); }
+.mg-ya-btn { flex: 1; min-height: 2.5rem; font: inherit; font-weight: 600; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: transparent; color: inherit; cursor: pointer; }
+.mg-ya-btn[aria-pressed="true"] { background: var(--g-pierna); border-color: var(--g-pierna); color: #fff; }
+.mg-guia .mg-ya-btn { flex: none; align-self: flex-start; padding: 0 var(--cds-pad-md); }
+.mg-ex.mg-hecho { opacity: .45; }
+.mg-ex.mg-toca { outline: 3px solid var(--g-pierna); outline-offset: 2px; }

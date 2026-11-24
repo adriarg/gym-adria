@@ -238,9 +238,50 @@ dash.draw('rutina-dia', (ul) => {
     linea('Técnica', mark('span', 'rutina', w, 'nota', r.nota));
     fila('En Hevy', mark('span', 'rutina', w, 'hevy', r.hevy, 'mg-code'));
     li.append(top, fotoBox, media, nota, dl);
+    li.setAttribute('data-id', r.id);
+    const acc = el('div', 'mg-ya');
+    acc.append(mgBoton('Hecho', () => mgMarcar(dia, rows, ul, 'hechos', r.id)), mgBoton('Ocupada', () => mgMarcar(dia, rows, ul, 'ocupados', r.id)));
+    li.insertBefore(acc, fotoBox);
     return li;
   }));
+  const guia = el('li', 'mg-guia');
+  ul.prepend(guia);
+  mgPintarGuia(dia, rows, ul);
 });
+
+// «Ocupada → ¿y ahora?»: lo que marca se guarda solo en este móvil y solo para hoy.
+const mgEstado = (dia) => {
+  const hoy = new Date().toISOString().slice(0, 10);
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem('mg-hoy-' + dia)); } catch (e) { /* sin almacenamiento: empieza de cero */ }
+  return s && s.fecha === hoy ? s : {fecha: hoy, hechos: [], ocupados: []};
+};
+const mgGuardar = (dia, s) => { try { localStorage.setItem('mg-hoy-' + dia, JSON.stringify(s)); } catch (e) { /* sin almacenamiento: vale solo mientras esté abierta */ } window['mgHoy' + dia] = s; };
+const mgLeer = (dia) => window['mgHoy' + dia] || mgEstado(dia);
+const mgBoton = (texto, fn) => { const b = el('button', 'mg-ya-btn', texto); b.type = 'button'; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', fn); return b; };
+const mgMarcar = (dia, rows, ul, lista, id) => {
+  const s = mgLeer(dia), otra = lista === 'hechos' ? 'ocupados' : 'hechos';
+  s[lista] = s[lista].includes(id) ? s[lista].filter((x) => x !== id) : [...s[lista], id];
+  s[otra] = s[otra].filter((x) => x !== id);
+  mgGuardar(dia, s);
+  mgPintarGuia(dia, rows, ul);
+};
+const mgPintarGuia = (dia, rows, ul) => {
+  const s = mgLeer(dia), sig = mgSiguiente(rows, s.hechos, s.ocupados);
+  const guia = ul.querySelector('.mg-guia');
+  const r = rows.find((x) => x.id === sig.id);
+  guia.replaceChildren(el('b', null, r ? 'Ahora toca: ' + r.orden + '. ' + r.maquina : sig.porque));
+  if (r) guia.append(el('span', 'mg-note', r.ejercicio + ' — ' + sig.porque));
+  guia.append(el('span', 'mg-note', 'Marca «Hecho» al acabar cada ejercicio y «Ocupada» si no puedes hacerlo ahora.'));
+  if (s.hechos.length || s.ocupados.length) guia.append(mgBoton('Empezar de cero', () => { mgGuardar(dia, {fecha: s.fecha, hechos: [], ocupados: []}); mgPintarGuia(dia, rows, ul); }));
+  for (const li of ul.querySelectorAll('li.mg-ex')) {
+    const id = li.getAttribute('data-id'), [bh, bo] = li.querySelectorAll('.mg-ya-btn');
+    bh.setAttribute('aria-pressed', String(s.hechos.includes(id)));
+    bo.setAttribute('aria-pressed', String(s.ocupados.includes(id)));
+    li.classList.toggle('mg-hecho', s.hechos.includes(id));
+    li.classList.toggle('mg-toca', id === sig.id);
+  }
+};
 
 const ejActual = () => { const d = dash.data('ejercicios'); if (d.status !== 'ok' || !d.data.length) return null; const p = dash.params().ej; return d.data.some((r) => r.ejercicio === p) ? p : d.data[0].ejercicio; };
 dash.draw('sel-ej', (sel) => {

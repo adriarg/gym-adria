@@ -137,3 +137,14 @@ test('peso sugerido: en pirámide, si la serie tope se pasa mucho del rango, sub
   const r = sug([sesion(1, '2026-11-13', PRESS + '\nSet 1: 15 kg x 12\nSet 2: 20 kg x 15\nSet 3: 25 kg x 15')], 'L1');
   assert.equal(r.kg, 25 + ej('L1').incremento);
 });
+
+test('«¿y ahora?»: sigue el orden y, si está ocupada, no repite músculo', () => {
+  const lunes = rutina.filter((r) => r.dia === 'Lunes');
+  const sig = (h, o) => ctx.mgSiguiente(lunes, h, o).id;
+  assert.equal(sig([], []), 'M9');                    // nada ocupado: su orden
+  assert.equal(sig(['M9'], ['M10']), 'M2');           // prensa ocupada tras la búlgara: curl femoral (no repite glúteo/cuádriceps)
+  assert.equal(sig(['M9'], ['M10', 'M2']), 'M1');     // si todo choca, mejor un pesado que el crunch antes de tiempo
+  assert.equal(sig(['M9'], ['M10', 'M2', 'M1', 'M3', 'M4']), 'M7'); // el crunch solo si no queda otra
+  assert.equal(sig(['M9', 'M10', 'M2', 'M1', 'M3', 'M7', 'M4'], []), null); // terminado
+  for (const r of rutina) assert.ok([1, 2, 3].includes(r.fase), r.id + ' sin fase');
+});
