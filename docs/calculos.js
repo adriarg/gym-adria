@@ -1,5 +1,24 @@
 /* Las listas de la rutina (principal, secundario, mapa) llegan como texto JSON: esto las vuelve lista. */
 window.mgLista = (v) => { if (Array.isArray(v)) return v; if (typeof v !== 'string' || !v.trim()) return []; try { const a = JSON.parse(v); return Array.isArray(a) ? a : [a]; } catch (e) { return v.split(',').map((x) => x.trim()).filter(Boolean); } };
+/* «Ocupada → ¿y ahora?»: qué ejercicio del día toca. rows = ejercicios del día; hechos = ids en el orden en que los hizo; ocupados = ids.
+   Regla: si el siguiente de su orden está libre, ese. Si no: el libre que no repita músculo con el último hecho,
+   sin dejar los de fase 3 (abdominales) para antes de tiempo; luego el de fase más baja (pesados antes) y luego su orden. */
+window.mgSiguiente = (rows, hechos, ocupados) => {
+  const hechosSet = new Set(hechos), ocSet = new Set(ocupados);
+  const pend = rows.filter((r) => !hechosSet.has(r.id)).sort((a, b) => a.orden - b.orden);
+  if (!pend.length) return {id: null, porque: 'Has terminado el entreno.'};
+  if (!ocSet.has(pend[0].id)) return {id: pend[0].id, porque: 'Sigue tu orden.'};
+  const libres = pend.filter((r) => !ocSet.has(r.id));
+  if (!libres.length) return {id: null, porque: 'Todo lo que te queda está ocupado: espera a que se libere ' + pend[0].ejercicio + '.'};
+  const ult = rows.find((r) => r.id === hechos[hechos.length - 1]);
+  const choca = (r) => !!ult && (r.musculo === ult.musculo || mgLista(r.principal).some((p) => mgLista(ult.principal).includes(p)));
+  const fase = (r) => r.fase || 2;
+  const tarde = (r) => fase(r) === 3 && libres.some((x) => fase(x) < 3);
+  const clave = (r) => [tarde(r) ? 1 : 0, choca(r) ? 1 : 0, fase(r), r.orden];
+  const mejor = libres.slice().sort((a, b) => { const x = clave(a), y = clave(b); for (let i = 0; i < x.length; i++) if (x[i] !== y[i]) return x[i] - y[i]; return 0; })[0];
+  const tipo = ['', 'de los pesados', 'de los ligeros', 'de los del final'][fase(mejor)];
+  return {id: mejor.id, porque: pend[0].ejercicio + ' está ocupado. Haz este: es ' + tipo + (ult ? (choca(mejor) ? ', aunque repite músculo con ' + ult.ejercicio + ' (no queda otro libre)' : ' y no repite músculo con ' + ult.ejercicio) : '') + '. Vuelve a ' + pend[0].ejercicio + ' cuando se libere.'};
+};
 d3.formatDefaultLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['', ' €']});
 d3.timeFormatDefaultLocale({
   dateTime: '%A, %e de %B de %Y, %X', date: '%d/%m/%Y', time: '%H:%M:%S', periods: ['AM', 'PM'],
