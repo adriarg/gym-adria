@@ -263,6 +263,8 @@ const mgMarcar = (dia, rows, ul, lista, id) => {
   const s = mgLeer(dia), otra = lista === 'hechos' ? 'ocupados' : 'hechos';
   s[lista] = s[lista].includes(id) ? s[lista].filter((x) => x !== id) : [...s[lista], id];
   s[otra] = s[otra].filter((x) => x !== id);
+  // Al acabar un ejercicio, lo ocupado se olvida: mientras tanto se habrá liberado; si no, se vuelve a marcar.
+  if (lista === 'hechos' && s.hechos.includes(id)) s.ocupados = [];
   mgGuardar(dia, s);
   mgPintarGuia(dia, rows, ul);
 };
