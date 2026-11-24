@@ -25,6 +25,7 @@ Habla siempre en español y tutea. Adrià no es programador: explícale los resu
 - Molestia (2026-11-09 y 2026-11-12): dolor lumbar en el peso muerto rumano («técnica mejorable»). Con rumano el lunes y peso muerto el jueves: poco peso, 2–3 reps en reserva y vigilarlo.
 - Calentamiento (2026-11-12): como máximo 1 serie de aproximación por ejercicio, nunca 2. En los ejercicios a un brazo (lateral en polea) es 1 por brazo, así que en Hevy salen 2 Warm-up: es correcto.
 - Cada comentario de técnica que se le dé en el chat (feedback de un entreno, dudas de sus notas de Hevy) se añade en ese momento a la `nota` del ejercicio en `dashboard/rutina.json`, para que salga en las notas del siguiente entreno (2026-11-20).
+- Notas de Hevy (2026-11-24, lo pidió Adrià): TODAS sus notas de Hevy van siempre a la `nota` del ejercicio y a lo que se le da para pegar, aunque no se entiendan (entonces, literales: «Tu nota: «…»»). Si no está claro de qué ejercicio es, ponla en todos los candidatos.
 - Toda la rutina está en `dashboard/rutina.json` (ejercicio, máquina, nombre en Hevy, series, reps, descanso, calentamiento, esfuerzo, peso inicial, partes del músculo que trabaja…).
 - Partes musculares, prioridad y series objetivo en `dashboard/partes.json`. Reglas nombre de Hevy → músculo en `dashboard/musculos.json`.
 - Máquinas disponibles en Mast: `datos/equipamiento-mast.md`. Usa solo máquinas de esa lista.
