@@ -13,7 +13,7 @@
     "series": 3,
     "reps": "6–10",
     "descanso": "2–3 min",
-    "nota": "Banco a la altura 7. Un solo peso para las 3 series. Si al final te ayudas con las piernas, esa rep no cuenta: pies quietos y glúteo pegado al asiento. Tu nota: «atentos al +2,5».",
+    "nota": "Banco a la altura 7. Un solo peso para las 3 series. Si al final te ayudas con las piernas, esa rep no cuenta: pies quietos y glúteo pegado al asiento. Tu nota: «atentos al +2,5». No es el mismo que el 3 (press inclinado): este trabaja el pecho medio y el inclinado el pecho alto.",
     "principal": [
       "pec_est"
     ],
@@ -81,7 +81,7 @@
     "series": 2,
     "reps": "8–12",
     "descanso": "2 min",
-    "nota": "Piernas abiertas en V contra el soporte de abajo y escápulas atrás y abajo, así trabaja el pecho y no el hombro. Baja hasta notar el estiramiento del pecho. Banco a la altura 7.",
+    "nota": "Piernas abiertas en V contra el soporte de abajo y escápulas atrás y abajo, así trabaja el pecho y no el hombro. Baja hasta notar el estiramiento del pecho. Banco a la altura 7. Tu nota: «¿ejercicio repetido con el primero?». No lo es si la máquina es inclinada (empujas hacia arriba en diagonal): trabaja el pecho alto. Si es plana como la MTS, avísame.",
     "principal": [
       "pec_clav"
     ],
@@ -149,7 +149,7 @@
     "series": 4,
     "reps": "10–15",
     "descanso": "90 s",
-    "nota": "De cara a la máquina y con el pecho siempre pegado al soporte (sin apoyo es mucho más fácil y deja de valer). Sube con los codos, sin encoger los hombros. Apunta el peso total que marca la máquina.",
+    "nota": "De cara a la máquina y con el pecho siempre pegado al soporte (sin apoyo es mucho más fácil y deja de valer). Sube con los codos, sin encoger los hombros. Apunta el peso total que marca la máquina. Tu nota: «móvil en imán».",
     "principal": [
       "del_lat"
     ],
@@ -236,7 +236,7 @@
     "series": 3,
     "reps": "8–12",
     "descanso": "2 min (entre piernas, 30 s)",
-    "nota": "Pie de atrás apoyado en el banco con el empeine. Paso largo: al bajar, la rodilla de delante no se va hacia dentro. Tronco un poco inclinado hacia delante para que trabaje más el glúteo. Empieza siempre por la pierna más floja y haz las mismas reps con la otra. El peso es el de cada mancuerna. Las series de 0 kg márcalas como calentamiento en Hevy (máximo 1 por pierna). En Hevy apunta cada pierna como una serie (3 por pierna = 6 series).",
+    "nota": "Pie de atrás apoyado en el banco con el empeine. Paso largo: al bajar, la rodilla de delante no se va hacia dentro. Tronco un poco inclinado hacia delante para que trabaje más el glúteo. Empieza siempre por la pierna más floja y haz las mismas reps con la otra. El peso es el de cada mancuerna. Las series de 0 kg márcalas como calentamiento en Hevy (máximo 1 por pierna). En Hevy apunta cada pierna como una serie (3 por pierna = 6 series). Tu nota: «30 segundos entre piernas».",
     "principal": [
       "vastos",
       "glut_max"
@@ -297,7 +297,7 @@
     "series": 3,
     "reps": "10–12",
     "descanso": "90 s",
-    "nota": "Inclínate un poco hacia delante para estirar más. Pies flexionados hacia ti y tensos: con eso rindes mucho más.",
+    "nota": "Inclínate un poco hacia delante para estirar más. Pies flexionados hacia ti y tensos: con eso rindes mucho más. Asiento hacia atrás.",
     "principal": [
       "isq_largos",
       "isq_bfc"
@@ -326,7 +326,7 @@
     "series": 2,
     "reps": "8–12",
     "descanso": "2–3 min",
-    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo. Nunca al fallo: si te salen más de 12, sube peso en vez de seguir. En Hevy, el peso es la suma de los dos lados, sin los 36,7 kg de la máquina.",
+    "nota": "Baja todo lo que puedas con la espalda pegada al respaldo. Nunca al fallo: si te salen más de 12, sube peso en vez de seguir. En Hevy, el peso es la suma de los dos lados, sin los 36,7 kg de la máquina. Tu nota: «me he pasado en la 1a».",
     "principal": [
       "vastos",
       "glut_max"
@@ -355,7 +355,7 @@
     "series": 2,
     "reps": "8–10",
     "descanso": "2–3 min",
-    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie. Apunta en Hevy solo los discos, sin los 20 kg de la barra. Con la barra sola hasta que no moleste la lumbar 2 sesiones seguidas; entonces +2,5 kg por lado. Si duele, para y pídele a tu entrenadora que te mire la técnica. Aprieta dorsales y abdomen antes de bajar y haz rodar la barra pegada a las piernas.",
+    "nota": "Coge la barra del soporte a la altura del muslo, no del suelo. Rodillas un poco dobladas y quietas; echa el culo atrás con la barra rozando los muslos y la espalda recta. Baja hasta notar tirón detrás del muslo (poco más abajo de la rodilla) y sube apretando glúteo. Grábate de lado la primera serie. Apunta en Hevy solo los discos, sin los 20 kg de la barra. Con la barra sola hasta que no moleste la lumbar 2 sesiones seguidas; entonces +2,5 kg por lado. Si duele, para y pídele a tu entrenadora que te mire la técnica. Aprieta dorsales y abdomen antes de bajar y haz rodar la barra pegada a las piernas. Tu nota: «creo que he mejorado técnica».",
     "principal": [
       "isq_largos",
       "glut_max"
