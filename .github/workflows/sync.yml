@@ -29,7 +29,7 @@ jobs:
       cancel-in-progress: false
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -67,6 +67,15 @@ jobs:
       - name: Publicar
         id: deploy
         if: steps.guardar.outputs.cambios == 'si' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.cadena)
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      # A veces GitHub aún no «ve» la web recién preparada («No artifacts named github-pages»): espera y reintenta.
+      - name: Esperar antes de reintentar
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 60
+      - name: Publicar (2º intento)
+        id: deploy2
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
   # Relevo: como el reloj de GitHub no salta, cada ejecución espera unos minutos y lanza la siguiente.
