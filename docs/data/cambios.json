@@ -130,5 +130,23 @@
   "id": "V4",
   "cambio": "Jueves: el curl inclinado se sustituye por el curl martillo con mancuernas, 3 × 8–12.",
   "motivo": "Más braquial y braquiorradial (grosor del brazo y antebrazo). Bíceps sigue por encima del objetivo: cabeza larga ≈12/10, corta ≈10,5/10; braquial 10,5/6, braquiorradial 9/4."
+ },
+ {
+  "fecha": "2026-11-26",
+  "id": "V8",
+  "cambio": "Sentadilla con barra → Hack squat (Hammer Strength)",
+  "motivo": "A Adrià no le gusta la barra olímpica (le molestó la lumbar y le duele el apoyo en la espalda). Para ganar músculo, máquinas y peso libre dan resultados parecidos (Haugen et al. 2023); manda la constancia."
+ },
+ {
+  "fecha": "2026-11-26",
+  "id": "V9",
+  "cambio": "Peso muerto con barra → Extensión de espalda a 45° (Back Extension, Hammer Strength)",
+  "motivo": "A Adrià no le gusta la barra olímpica (le molestó la lumbar y le duele el apoyo en la espalda). Para ganar músculo, máquinas y peso libre dan resultados parecidos (Haugen et al. 2023); manda la constancia. El glúteo ya va fuerte con el hip thrust."
+ },
+ {
+  "fecha": "2026-11-26",
+  "id": "M3",
+  "cambio": "Rumano con barra → Rumano con mancuernas",
+  "motivo": "A Adrià no le gusta la barra olímpica (le molestó la lumbar y le duele el apoyo en la espalda). Para ganar músculo, máquinas y peso libre dan resultados parecidos (Haugen et al. 2023); manda la constancia. Mismo movimiento; con mancuernas sí le gusta."
  }
 ]
